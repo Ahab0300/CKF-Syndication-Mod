@@ -1,4 +1,4 @@
-#Syndication Mod Documentation
+#  Syndication Mod Documentation
 
 The **Syndication Mod** expands the Syndicate Factions in CKF. In the base game, only the D-Cartel syndicate
 and Que Milieu syndicate can offer jobs or be the target of jobs. The Ricksham syndicate has a

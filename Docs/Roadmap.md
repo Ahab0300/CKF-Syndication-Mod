@@ -1,4 +1,4 @@
-#Roadmap for Syndication Mod
+# Roadmap for Syndication Mod
 
 - [Factions](Factions.md)
 - [Services](Services.md)

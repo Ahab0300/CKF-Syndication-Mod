@@ -1,5 +1,5 @@
-#CKF-Syndication-Mod
-##Cyber Knights: Flashpoint Syndication Mod
+# CKF-Syndication-Mod
+## Cyber Knights: Flashpoint Syndication Mod
 
 <picture>
   <source media="(min-width:1080px)" srcset="./Images/Syndication_256_icon.png">

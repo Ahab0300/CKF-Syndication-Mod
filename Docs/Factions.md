@@ -1,4 +1,4 @@
-#Factions
+# Factions
 
 - [Services](Services.md)
 - [Roadmap](Roadmap.md)
@@ -7,7 +7,7 @@ In the base game, only the D-Cartel syndicate and Que Milieu syndicate can
 offer jobs or be the target of jobs. The **Syndication Mod** expands the
 number of Syndicates you can interact with.
 
-##Ricksham
+## Ricksham
 
 **Ricksham** appears in the base game as a syndicate focusing on the rail
 lines that connect New Boston to other surviving cities. Rail is the primary
@@ -21,7 +21,7 @@ a Railmaster. The Railmaster is the equivalent of a Dockmaster for water
 traffic. The Railmaster will get a new Service offering the occasional sale
 of rare products.
 
-##Seven Dragons
+## Seven Dragons
 The **Seven Dragons** syndicate is coded into the base game but is not
 enabled. This syndicate specializes in financial crime, funnelling illicit
 Digitals through legitimate businesses they own. **Syndication Mod** enables
@@ -36,7 +36,7 @@ game.
 Future updates will add two more Contacts to the game, a Syndicate Blade and
 a Syndicate Financier.
 
-##Yakuza
+## Yakuza
 The **Yakuza** was a prominent faction in the **Cyber Knights Classic** game.
 All the other Factions in **Cyber Knights Classic** have appeared in
 **Cyber Knights:Flashpoint** as either Factions or important background lore
@@ -49,7 +49,7 @@ updates will add a Syndicate Boss, a Syndicate Blade, and a Syndicate
 Financier. The Syndicate Blade will offer a unique Service related to
 strong-arm enforcement.
 
-##Que Milieu
+## Que Milieu
 The **Que Milieu** is active in the base game, has multiple Contacts, and can
 be a target of proc-gen missions. To match the new factions,
 **Syndication Mod** adds a new unique Service for **Que Milieu**.
@@ -59,7 +59,7 @@ Contact if Emille was selected for the starting team. In a future update,
 **Syndication Mod** will make **Mongrel** available in every game and give
 her a new unique Service called (of course) **Moneylending**.
 
-##D-Cartel
+## D-Cartel
 The **D-Cartel** syndicate is the largest and most prominent Syndicate Faction
 in the base game. **D-Cartel** already has several unique Contacts, including
 a Fabber and several Splicers with rare or unique Services. Therefore,
