@@ -1,0 +1,36 @@
+{
+	"Metadata": {
+		"#": "Yakuza Syndicate Boss",
+        "StoryKey": "AhabEspionage_Yakuza_SynBoss",
+        "StartingId": 781041501
+	},
+	"ContactBackstory": [
+		{
+			"#": "Yakuza Syndicate Boss",
+			"ContactBackstoryId": 781041501,
+			"Group": 781041501,
+			"ContactType": 17,
+			"Status": 1,
+			"InfluenceScore": 4,
+			"PowerLevel": 4,
+			"Cosmetic": 228,
+			"Weight": 1,
+			"Trait1A": "ConTrait_Influential",
+			"Trait1B": "ConTrait_Generous",
+			"Trait2A": "ConTrait_SyndicateMerch",
+			"Trait2B": "",
+			"ContactLink": "NCP_AhabSyndication_Yakuza_SynBoss",
+			"FactionTag": "Faction_AhabSyndication_Yakuza",
+			"Tag1": "Faction_Corrupt+Faction_AhabSyndication_Yakuza",
+			"Tag2": "Tag_Gambler",
+			"TagID": "PersonID_NCP_AhabSyndication_Yakuza_SynBoss",
+			"GivenName": "Foxtrot"
+		}
+	],
+	"Tag": [
+		{
+			"TagClass": "PersonalID",
+			"TagId": "PersonID_NCP_AhabSyndication_Yakuza_SynBoss"
+		}
+	]
+}

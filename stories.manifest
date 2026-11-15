@@ -1,0 +1,46 @@
+# Syndication Mod files
+#
+# I have organized the mod files so that all the data associated with
+# an item, for example, are together in a single file, to make it easier
+# to create and debug specific gear, classes, characters, and stories
+
+# Factions
+#
+# Each faction file contains all the associated data for the following
+# tables as needed:
+#
+# Faction, Tag
+
+Source_JSON/Factions.json
+
+# Contact Classes
+#
+# Each contact class file contains all the associated data for the following
+# tables as needed:
+#
+# ContactType, ContactService, Tag
+
+Source_JSON/ContactTypes.json
+
+# Contacts
+#
+# Each contact type file contains all the associated data for the following
+# tables as needed
+#
+# ContactBackstory, ContactService, CosmeticGroup
+
+Source_JSON/Contact_Dragons_CasinoOwner.json
+Source_JSON/Contact_Dragons_SynBlade.json
+Source_JSON/Contact_Dragons_SynFinance.json
+Source_JSON/Contact_Ricksham_Railmaster.json
+Source_JSON/Contact_Ricksham_SynBlade.json
+Source_JSON/Contact_Yakuza_SynBlade.json
+Source_JSON/Contact_Yakuza_SynBoss.json
+Source_JSON/Contact_Yakuza_SynFinance.json
+
+# Stories
+#
+# Each contact type file contains all the associated data for the following
+# tables as needed:
+#
+# Legwork, StoryNode, StoryMatch, Block, BlockCondition, Dialog, DialogQuip, Tag, Talent

@@ -1,0 +1,1249 @@
+{
+	"Metadata": {
+		"#": "Seven Dragons Casino Owner",
+		"StoryKey": "AhabSyndication_Dragons_CasinoOwner",
+		"StartingId": 781041401
+	},
+	"ContactBackstory": [
+		{
+			"#": "Seven Dragons Casino Owner",
+			"ContactBackstoryId": 781041401,
+			"Group": 781041401,
+			"ContactType": 781040201,
+			"Status": 1,
+			"InfluenceScore": 4,
+			"PowerLevel": 4,
+			"Cosmetic": 98,
+			"Weight": 1,
+			"Trait1A": "ConTrait_PremiumMarkup",
+			"Trait1B": "ConTrait_Greedy",
+			"Trait2A": "ConTrait_TightLipped",
+			"Trait2B": "ConTrait_EasyToPlease",
+			"ContactLink": "NCP_AhabSyndication_Dragons_CasinoOwner",
+			"FactionTag": "Faction_SevenDragons",
+			"Tag1": "Faction_Corrupt+Faction_SevenDragons",
+			"Tag2": "Tag_PowerCenter",
+			"TagID": "PersonID_NCP_AhabSyndication_Dragons_CasinoOwner",
+			"Location": "Boston Common Casino",
+			"GivenName": "Echo"
+		}
+	],
+	"Tag": [
+		{
+			"TagClass": "PersonalID",
+			"TagId": "PersonID_NCP_AhabSyndication_Dragons_CasinoOwner"
+		},
+		{
+			"TagClass": "Hidden",
+			"TagId": "Srv_Gambling_PL1"
+		},
+		{
+			"TagClass": "Hidden",
+			"TagId": "Srv_Gambling_PL2"
+		},
+		{
+			"TagClass": "Hidden",
+			"TagId": "Srv_Gambling_PL3"
+		},
+		{
+			"TagClass": "Hidden",
+			"TagId": "Srv_Gambling_PL4"
+		},
+		{
+			"TagClass": "Hidden",
+			"TagId": "Mem_AhabSyndication_CasinoIntro"
+		},
+		{
+			"TagClass": "Hidden",
+			"TagId": "Mem_AhabSyndication_CasinoOwner"
+		}
+	],
+	"ContactService": [
+		{
+			"ServiceTypeId": 781041401,
+			"Class": 1,
+			"Group": 781041401,
+			"Level": 1,
+			"Display": 1,
+			"Option": 1,
+			"Upgrade": 1,
+			"TagMatch": "Srv_Gambling_PL1",
+			"Name": "Gambling",
+			"Desc": "Offers exclusive gambling games for high stakes"
+		},
+		{
+			"ServiceTypeId": 781041402,
+			"Class": 1, 
+			"Group": 781041401,
+			"Level": 2,
+			"Display": 2,
+			"Option": 2,
+			"Upgrade": 1,
+			"TagMatch": "Srv_Gambling_PL2",
+			"Name": "Gambling",
+			"Desc": "Offers exclusive gambling games for high stakes"
+		},
+		{
+			"ServiceTypeId": 781041403,
+			"Class": 1,
+			"Group": 781041401,
+			"Level": 3,
+			"Display": 3,
+			"Option": 3,
+			"Upgrade": 1,
+			"TagMatch": "Srv_Gambling_PL3",
+			"Name": "Gambling",
+			"Desc": "Offers exclusive gambling games for high stakes"
+		},
+		{
+			"ServiceTypeId": 781041404,
+			"Class": 1,
+			"Group": 781041401,
+			"Level": 4,
+			"Display": 4,
+			"Option": 4,
+			"Upgrade": 2,
+			"TagMatch": "Srv_Gambling_PL4",
+			"Name": "Gambling",
+			"Desc": "Offers exclusive gambling games for high stakes"
+		}
+	],
+	"Block": [
+		{
+			"GroupId": "B_AhabSyndication_Casino_Match",
+			"Items": [
+				{
+					"Weight": 20,
+					"PreState1": "NOT_TEMP_AhabSyndication_Casino_Intro",
+					"PreDialogPostCondition": "Post_AhabSyndication_Casino_Intro",
+					"PostState1": "ADD_TEMP_AhabSyndication_Casino_Intro",
+					"PostState2": "ADD_S_AhabSyndication_MetCasinoOwner",
+					"StoryNode1": "ADD_SN_AhabSyndication_Casino_Intro",
+					"OnlyRunOnce": "Forever",
+					"EventId": "Match_AhabSyndication_Casino_Intro",
+					"EventType": "Vignette"
+				}
+			]
+		},
+		{
+			"GroupId": "B_AhabSyndication_Casino_Intro",
+			"Items": [
+				{
+					"StoryNodeId": "SN_AhabSyndication_Casino_Intro",
+					"Actor": "NCT_AhabSyndication_CasinoIntro",
+					"Target": "NCT_AhabSyndication_CasinoOwner",
+					"Side": "R",
+					"Dialog": "D_AhabSyndication_Casino_Intro",
+					"EventId": "B_AhabSyndication_Casino_IntroCleanup",
+					"EventType": "TalkOn",
+					"Text": "I received a curious message from the owner of the Boston Common Casino."
+				}
+			]
+		},
+		{
+			"GroupId": "B_AhabSyndication_Casino_IntroCleanup",
+			"Items": [
+				{
+					"PostConditionGroup": "Post_AhabSyndication_Casino_IntroCleanup",
+					"PostState1": "DEL_TEMP_AhabSyndication_Casino_Intro",
+					"StoryNode1": "ADD_SN_AhabSyndication_Casino_Offer",
+					"StoryNode2": "DEL_SN_AhabSyndication_Casino_Intro"
+				}
+			]
+		},
+		{
+			"GroupId": "B_AhabSyndication_Casino_Offer",
+			"Items": [
+				{
+					"StoryNodeId": "SN_AhabSyndication_Casino_Offer",
+					"Actor": "NTG_Mem_AhabSyndication_CasinoOwner",
+					"Side": "R",
+					"ChoiceMeta": "Chatter",
+					"Dialog": "D_AhabSyndication_Casino_Offer",
+					"EventId": "B_AhabSyndication_Casino_Choices",
+					"EventType": "Choice",
+					"Text": "Come join a high-stakes game at the Boston Common Casino."
+				}
+			]
+		},
+		{
+			"GroupId": "B_AhabSyndication_Casino_Choices",
+			"Items": [
+				{
+					"Actor": "PCP_Knight",
+					"PreConditionGroup": "Pre_AhabSyndication_Casino_Stake100",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Stake100",
+					"PostState1": "SET_100_Temp_AhabSyndication_Casino_Stake",
+					"Dialog": "D_AhabSyndication_Casino_GameStart",
+					"EventId": "B_AhabSyndication_Casino_GameStart",
+					"EventType": "TalkOn",
+					"Text": "$100k"
+				},
+				{
+					"Actor": "PCP_Knight",
+					"PreConditionGroup": "Pre_AhabSyndication_Casino_Stake200",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Stake200",
+					"PostState1": "SET_200_Temp_AhabSyndication_Casino_Stake",
+					"Dialog": "D_AhabSyndication_Casino_GameStart",
+					"EventId": "B_AhabSyndication_Casino_GameStart",
+					"EventType": "TalkOn",
+					"Text": "$200k"
+				},
+				{
+					"Actor": "PCP_Knight",
+					"PreConditionGroup": "Pre_AhabSyndication_Casino_Stake400",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Stake500",
+					"PostState1": "SET_800_Temp_AhabSyndication_Casino_Stake",
+					"Dialog": "D_AhabSyndication_Casino_GameStart",
+					"EventId": "B_AhabSyndication_Casino_GameStart",
+					"EventType": "TalkOn",
+					"Text": "$400k"
+				},
+				{
+					"Actor": "PCP_Knight",
+					"PreConditionGroup": "Pre_AhabSyndication_Casino_Stake800",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Stake800",
+					"PostState1": "SET_800_Temp_AhabSyndication_Casino_Stake",
+					"Dialog": "D_AhabSyndication_Casino_GameStart",
+					"EventId": "B_AhabSyndication_Casino_GameStart",
+					"EventType": "TalkOn",
+					"Text": "$800k"
+				},
+				{
+					"Actor": "PCP_Knight",
+					"ChoiceMeta": "End",
+					"Dialog": "D_AhabSyndication_Casino_Delay",
+					"Text": "Maybe another time."
+				}
+			]
+		},
+		{
+			"GroupId": "B_AhabSyndication_Casino_GameStart",
+			"Items": [
+				{
+					"StoryNode1": "DEL_SN_AhabSyndication_Casino_Offer",
+					"StoryNode2": "ADD_SN_AhabSyndication_Casino_Cooldown",
+					"StoryNode3": "ADD_SN_AhabSyndication_Casino_GameStart"
+				}
+			]
+		},
+		{
+			"GroupId": "B_AhabSyndication_Casino_Cooldown",
+			"Items": [
+				{
+					"StoryNodeId": "SN_AhabSyndication_Casino_Cooldown",
+					"Actor": "NTG_Mem_AhabSyndication_CasinoOwner",
+					"Side": "R",
+					"ChoiceMeta": "Chatter",
+					"Dialog": "D_AhabSyndication_Casino_Cooldown",
+					"Text": "I don't have room right now in the high-stakes game. Try again later."					
+				}
+			]
+		},
+		{
+			"GroupId": "B_AhabSyndication_Casino_PlayingGame",
+			"Items": [
+				{
+					"StoryNodeId": "SN_AhabSyndication_Casino_GameStart",
+					"Actor": "PCP_Knight",
+					"Dialog": "D_AhabSyndication_Casino_PlayingGame",
+					"Text": "{0} is engaged in high-stakes gambling at the Boston Common Casino."
+				}
+			]
+		},
+		{
+			"GroupId": "B_AhabSyndication_Casino_Results",
+			"Items": [
+				{
+					"Actor": "PCP_Knight",
+					"StoryNode1": "DEL_SN_AhabSyndication_Casino_GameStart",
+					"Dialog": "D_AhabSyndication_Casino_Results",
+					"EventId": "B_AhabSyndication_Casino_ResultsGroup",
+					"EventType": "RandomOne",
+					"Text": "The game is over."
+				}
+			]
+		},
+		{
+			"GroupId": "B_AhabSyndication_Casino_ResultsGroup",
+			"Items": [
+				{
+					"Weight": 10,
+					"PreState1": "EQL_100_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win0",
+					"PostState1": "SET_0_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_1_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 25,
+					"PreState1": "EQL_100_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win50",
+					"PostState1": "SET_50_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_2_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 50,
+					"PreState1": "EQL_100_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win75",
+					"PostState1": "SET_75_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_3_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 75,
+					"PreState1": "EQL_100_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win100",
+					"PostState1": "SET_100_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_4_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 20,
+					"PreState1": "EQL_100_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win150",
+					"PostState1": "SET_150_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_5_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 10,
+					"PreState1": "EQL_100_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win200",
+					"PostState1": "SET_200_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_6_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 5,
+					"PreState1": "EQL_100_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win400",
+					"PostState1": "SET_400_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_7_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 10,
+					"PreState1": "EQL_200_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win0",
+					"PostState1": "SET_0_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_1_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 25,
+					"PreState1": "EQL_200_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win100",
+					"PostState1": "SET_100_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_2_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 50,
+					"PreState1": "EQL_200_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win150",
+					"PostState1": "SET_150_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_3_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 75,
+					"PreState1": "EQL_200_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win200",
+					"PostState1": "SET_200_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_4_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 20,
+					"PreState1": "EQL_200_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win300",
+					"PostState1": "SET_300_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_5_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 10,
+					"PreState1": "EQL_200_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win400",
+					"PostState1": "SET_400_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_6_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 5,
+					"PreState1": "EQL_200_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win800",
+					"PostState1": "SET_800_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_7_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 10,
+					"PreState1": "EQL_400_Temp_AhabSyndication_Casino_Stake",
+					"PostState1": "SET_0_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_1_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 25,
+					"PreState1": "EQL_400_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win200",
+					"PostState1": "SET_200_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_2_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 50,
+					"PreState1": "EQL_400_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win300",
+					"PostState1": "SET_300_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_3_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 75,
+					"PreState1": "EQL_400_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win400",
+					"PostState1": "SET_400_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_4_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 20,
+					"PreState1": "EQL_400_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win600",
+					"PostState1": "SET_600_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_5_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 10,
+					"PreState1": "EQL_400_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win800",
+					"PostState1": "SET_800_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_6_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 5,
+					"PreState1": "EQL_400_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win1600",
+					"PostState1": "SET_1600_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_7_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 10,
+					"PreState1": "EQL_800_Temp_AhabSyndication_Casino_Stake",
+					"PostState1": "SET_0_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_1_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 25,
+					"PreState1": "EQL_800_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win400",
+					"PostState1": "SET_400_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_2_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 50,
+					"PreState1": "EQL_800_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win600",
+					"PostState1": "SET_75_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_3_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 75,
+					"PreState1": "EQL_800_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win800",
+					"PostState1": "SET_800_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_4_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 20,
+					"PreState1": "EQL_800_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win1200",
+					"PostState1": "SET_1200_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_5_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 10,
+					"PreState1": "EQL_800_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win1600",
+					"PostState1": "SET_1600_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_6_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				},
+				{
+					"Weight": 5,
+					"PreState1": "EQL_800_Temp_AhabSyndication_Casino_Stake",
+					"PostConditionGroup": "Post_AhabSyndication_Casino_Win3200",
+					"PostState1": "SET_3200_Temp_AhabSyndication_Casino_Win",
+					"PostState2": "SET_7_Temp_AhabSyndication_Casino_WinState",
+					"EventId": "B_AhabSyndication_Casino_GameCleanup",
+					"EventType": "Group"
+				}
+			]
+		},
+		{
+			"GroupId": "B_AhabSyndication_Casino_GameCleanup",
+			"Items": [
+				{
+					"PostConditionGroup": "Post_AhabSyndication_Casino_GameCleanup",
+					"Dialog": "D_AhabSyndication_Casino_EndGame"
+				}
+			]
+		}
+	],
+	"BlockCondition": [
+		{
+			"GroupId": "Post_AhabSyndication_Casino_Intro",
+			"Items": [
+				{
+					"Type": "AddCharacter",
+					"Actor": "NCP_AhabSyndication_Dragons_SynBlade",
+					"BackstoryId": -1,
+					"BackstoryHint": 781041201
+				},
+				{
+					"Type": "AddCharacter",
+					"Actor": "NCP_AhabSyndication_Dragons_SynFinance",
+					"BackstoryId": -1,
+					"BackstoryHint": 781041301
+				},
+				{
+					"Type": "AddCharacter",
+					"Actor": "NCP_AhabSyndication_Dragons_CasinoOwner",
+					"BackstoryId": -1,
+					"BackstoryHint": 781041401
+				}
+			]
+		},
+		{
+			"GroupId": "Post_AhabSyndication_Casino_IntroCleanup",
+			"Items": [
+				{
+					"Type": "TempStoryId",
+					"Actor": "NCT_AhabSyndication_CasinoIntro",
+					"StoryId": "NCT_AhabSyndication_CasinoIntro",
+					"Remove": "true"
+				},
+				{
+					"Type": "TempStoryId",
+					"Actor": "NCT_AhabSyndication_CasinoOwner",
+					"StoryId": "NCT_AhabSyndication_CasinoOwner",
+					"Remove": "true"
+				}
+			]
+		},
+		{
+			"GroupId": "Pre_AhabSyndication_Casino_Stake100",
+			"Items": [
+				{
+					"Type": "Money",
+					"Amount": 100
+				},
+				{
+					"Type": "Tag",
+					"Actor": "NTG_Mem_AhabSyndication_CasinoOwner",
+					"Tag": "Srv_Gambling_PL1",
+					"RequireMatch": "true"
+				}
+			]
+		},
+		{
+			"GroupId": "Pre_AhabSyndication_Casino_Stake200",
+			"Items": [
+				{
+					"Type": "Money",
+					"Amount": 200
+				},
+				{
+					"Type": "Tag",
+					"Actor": "NTG_Mem_AhabSyndication_CasinoOwner",
+					"Tag": "Srv_Gambling_PL2",
+					"RequireMatch": "true"
+				}
+			]
+		},
+		{
+			"GroupId": "Pre_AhabSyndication_Casino_Stake400",
+			"Items": [
+				{
+					"Type": "Money",
+					"Amount": 400
+				},
+				{
+					"Type": "Tag",
+					"Actor": "NTG_Mem_AhabSyndication_CasinoOwner",
+					"Tag": "Srv_Gambling_PL3",
+					"RequireMatch": "true"
+				}
+			]
+		},
+		{
+			"GroupId": "Pre_AhabSyndication_Casino_Stake800",
+			"Items": [
+				{
+					"Type": "Money",
+					"Amount": 800
+				},
+				{
+					"Type": "Tag",
+					"Actor": "NTG_Mem_AhabSyndication_CasinoOwner",
+					"Tag": "Srv_Gambling_PL4",
+					"RequireMatch": "true"
+				}
+			]
+		},
+		{
+			"GroupId": "Post_AhabSyndication_Casino_Stake100",
+			"Items": [
+				{
+					"Type": "TempStoryId",
+					"Actor": "PCP_Knight",
+					"StoryId": "PCT_AhabSyndication_Knight"
+				},
+				{
+					"Type": "Money",
+					"Money": -100
+				}
+			]
+		},
+		{
+			"GroupId": "Post_AhabSyndication_Casino_Stake200",
+			"Items": [
+				{
+					"Type": "TempStoryId",
+					"Actor": "PCP_Knight",
+					"StoryId": "PCT_AhabSyndication_Knight"
+				},
+				{
+					"Type": "Money",
+					"Money": -200
+				}
+			]
+		},
+		{
+			"GroupId": "Post_AhabSyndication_Casino_Stake400",
+			"Items": [
+				{
+					"Type": "TempStoryId",
+					"Actor": "PCP_Knight",
+					"StoryId": "PCT_AhabSyndication_Knight"
+				},
+				{
+					"Type": "Money",
+					"Money": -400
+				}
+			]
+		},
+		{
+			"GroupId": "Post_AhabSyndication_Casino_Stake800",
+			"Items": [
+				{
+					"Type": "TempStoryId",
+					"Actor": "PCP_Knight",
+					"StoryId": "PCT_AhabSyndication_Knight"
+				},
+				{
+					"Type": "Money",
+					"Money": -800
+				}
+			]
+		},
+		{
+			"GroupId": "Post_AhabSyndication_Casino_Win50",
+			"Items": [
+				{
+					"Type": "Money",
+					"Money": 50
+				}
+			]
+		},
+		{
+			"GroupId": "Post_AhabSyndication_Casino_Win75",
+			"Items": [
+				{
+					"Type": "Money",
+					"Money": 75
+				}
+			]
+		},
+		{
+			"GroupId": "Post_AhabSyndication_Casino_Win100",
+			"Items": [
+				{
+					"Type": "Money",
+					"Money": 100
+				}
+			]
+		},
+		{
+			"GroupId": "Post_AhabSyndication_Casino_Win150",
+			"Items": [
+				{
+					"Type": "Money",
+					"Money": 150
+				}
+			]
+		},
+		{
+			"GroupId": "Post_AhabSyndication_Casino_Win200",
+			"Items": [
+				{
+					"Type": "Money",
+					"Money": 200
+				}
+			]
+		},
+		{
+			"GroupId": "Post_AhabSyndication_Casino_Win300",
+			"Items": [
+				{
+					"Type": "Money",
+					"Money": 300
+				}
+			]
+		},
+		{
+			"GroupId": "Post_AhabSyndication_Casino_Win400",
+			"Items": [
+				{
+					"Type": "Money",
+					"Money": 400
+				}
+			]
+		},
+		{
+			"GroupId": "Post_AhabSyndication_Casino_Win600",
+			"Items": [
+				{
+					"Type": "Money",
+					"Money": 600
+				}
+			]
+		},
+		{
+			"GroupId": "Post_AhabSyndication_Casino_Win800",
+			"Items": [
+				{
+					"Type": "Money",
+					"Money": 800
+				}
+			]
+		},
+		{
+			"GroupId": "Post_AhabSyndication_Casino_Win1200",
+			"Items": [
+				{
+					"Type": "Money",
+					"Money": 1200
+				}
+			]
+		},
+		{
+			"GroupId": "Post_AhabSyndication_Casino_Win1600",
+			"Items": [
+				{
+					"Type": "Money",
+					"Money": 1600
+				}
+			]
+		},
+		{
+			"GroupId": "Post_AhabSyndication_Casino_Win3200",
+			"Items": [
+				{
+					"Type": "Money",
+					"Money": 3200
+				}
+			]
+		},
+		{
+			"GroupId": "Post_AhabSyndication_Casino_GameCleanup",
+			"Items": [
+				{
+					"Type": "GameState",
+					"GameState1": "DEL_Temp_AhabSyndication_Casino_Stake"
+				},
+				{
+					"Type": "GameState",
+					"GameState1": "DEL_Temp_AhabSyndication_Casino_Win",
+					"GameState2": "DEL_Temp_AhabSyndication_Casino_WinState"
+				},
+				{
+				    "Type": "TempStoryId",
+					"Actor": "PCT_AhabSyndication_Knight",
+					"StoryId": "PCT_AhabSyndication_Knight",
+					"Remove": "true"
+				}
+			]
+		}
+	],
+	"StoryNode": [
+		{
+			"GroupId": "SN_AhabSyndication_Casino",
+			"Items": [
+				{
+					"StoryNodeId": "SN_AhabSyndication_Casino_Intro",
+					"Actor": "NCT_AhabSyndication_CasinoIntro",
+					"Target": "NCT_AhabSyndication_CasinoOwner",
+					"OnAddedBlock": "B_AhabSyndication_Casino_Intro",
+					"DebugText": "Offer to join high-stakes games",
+					"ExpirationTurns": 1
+				},
+				{
+					"StoryNodeId": "SN_AhabSyndication_Casino_Offer",
+					"Actor": "NTG_Mem_AhabSyndication_CasinoOwner",
+					"DebugText": "Buy into a high-stakes game",
+					"ExpirationTurns": -1
+				},
+				{
+					"StoryNodeId": "SN_AhabSyndication_Casino_GameStart",
+					"Actor": "PCT_AhabSyndication_Knight",
+					"ExpirationBlock": "B_AhabSyndication_Casino_Results",
+					"DebugText": "High-stakes game in progress",
+					"ExpirationTurns": 4
+				},
+				{
+					"StoryNodeId": "SN_AhabSyndication_Casino_Cooldown",
+					"Actor": "NTG_Mem_AhabSyndication_CasinoOwner",
+					"ExpirationStoryNode": "SN_AhabSyndication_Casino_Offer",
+					"DebugText": "High-stakes game on cooldown",
+					"ExpirationTurns": 120
+				}
+			]
+		}
+	],
+	"StoryMatch": [
+		{
+			"GroupId": "Match_AhabSyndication_Casino_Intro",
+			"Items": [
+				{
+					"Status": 1,
+					"TagReq1": "NPC_Meta_Entertainment",
+					"TagMatch": "Mem_AhabSyndication_CasinoIntro",
+					"Actor": "NCT_AhabSyndication_CasinoIntro",
+					"DebugName": "Casino Owner intro"
+				},
+				{
+					"Optional": "CreateOrFind",
+					"Backstory": 781041401,
+					"Status": 1,
+					"TagReq1": "NPC_AhabSyndication_CasinoOwner",
+					"TagMatch": "Mem_AhabSyndication_CasinoOwner",
+					"Actor": "NCT_AhabSyndication_CasinoOwner",
+					"DebugName": "Dragons Casino Owner"
+				}
+			]
+		}
+	],
+	"Trait": [
+		{
+			"Class": "SpecialStory",
+			"Effect": 10512,
+			"Level": 1,
+			"Name": "Night of Gambling",
+			"Desc": "You are out for a night of high-stakes gambling; you will be unavailable for missions until you return."
+		}
+	],
+	"Dialog": [
+		{
+			"GroupId": "D_AhabSyndication_Casino_Intro",
+			"Items": [
+				{
+					"Actor": "NCT_AhabSyndication_CasinoIntro",
+					"Target": "NCT_AhabSyndication_CasinoOwner",
+					"Side": "R",
+					"Text": "The casino is owned by {1} but rumors say it is a front for the <style=DialogName>Seven Dragons</style> syndicate."
+				},
+				{
+					"Actor": "PCP_Face",
+					"Text": "<style=DialogName>Seven Dragons</style> specializes in financial crimes, don't they?"
+				},
+				{
+					"Actor": "NCT_AhabSyndication_CasinoIntro",
+					"Side": "R",
+					"Text": "Everything from extortion to counterfeiting to white-collar fraud."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_CasinoIntro",
+					"Side": "R",
+					"Text": "But their real strength is investment in legitimate businesses."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_CasinoIntro",
+					"Side": "R",
+					"Text": "They generally keep a low profile and launder their illegal proceeds through some of their businesses."
+				},
+				{
+					"Actor": "PCP_Knight",
+					"Text": "A casino would be a particularly good place to launder money, as well as a source for identifying and scoping out potential targets."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_CasinoIntro",
+					"Target": "NCT_AhabSyndication_CasinoOwner",
+					"Side": "R",
+					"Text": "Now the owner, {1}, wants to talk to you."
+				},
+				{
+					"Actor": "PCP_Knight",
+					"Target": "NCT_AhabSyndication_CasinoOwner",
+					"Text": "Let's see what {3} wants to talk about."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_CasinoOwner",
+					"Target": "PCP_Knight",
+					"Side": "R",
+					"Text": "Hello, Hello! It's good to meet you, {1}"
+				},
+				{
+					"Actor": "PCP_Knight",
+					"Target": "NCT_AhabSyndication_CasinoOwner",
+					"Text": "Hello, {6}. I've heard you want to talk to me."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_CasinoOwner",
+					"Side": "R",
+					"Text": "I do indeed. News of a new Cyber Knight in town spreads quickly."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_CasinoOwner",
+					"Side": "R",
+					"Text": "You, my friend, are going to be a mover and shaker in this city."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_CasinoOwner",
+					"Side": "R",
+					"Text": "I make it my business to get to know movers and shakers."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_CasinoOwner",
+					"Side": "R",
+					"Text": "I'd like to invite you to visit the Boston Common Casino."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_CasinoOwner",
+					"Side": "R",
+					"Text": "You can meet so many interesting people there. Corp Vice Presidents and Gray Cards, MilSec agents and, shall we say, less legitimate persons."
+				},
+				{
+					"Actor": "PCP_Knight",
+					"Text": "It sounds like a lot of people there would like to see me dead."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_CasinoOwner",
+					"Side": "R",
+					"Text": "No need to worry about security - we have a very strict policy about disputes within our walls, and plenty of enforcers."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_CasinoOwner",
+					"Side": "R",
+					"Text": "We have made deals across the entire Zone. The Boston Common Casino is neutral ground."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_CasinoOwner",
+					"Side": "R",
+					"Text": "The casino lives up to its namesake, a Common where New Boston can meet."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_CasinoOwner",
+					"Target": "PCP_Knight",
+					"Side": "R",
+					"Text": "And we have a high-stakes game open only to the elite, the movers and shakers. People like you, {1}."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_CasinoOwner",
+					"Side": "R",
+					"Text": "As you might expect, the game is popular, so I could only fit you in about once a month."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_CasinoOwner",
+					"Side": "R",
+					"Text": "Call me if you are interested in buying into one of these game sessions. Maybe you can win the pot."
+				},
+				{
+					"Actor": "NAR_",
+					"Target": "NCT_AhabSyndication_CasinoOwner",
+					"Text": "We can find {1} in our Contact list to check out what additional services and offerings {3} may be able to provide."
+				},
+				{
+					"Actor": "NAR_",
+					"Target": "NCT_AhabSyndication_CasinoOwner",
+					"Text": "To join the high-stakes game, click on the Chat box in {5} profile."
+				},
+				{
+					"Actor": "NAR_",
+					"Text": "Participation in the game is limited to no more than once a month."
+				}
+			]
+		},
+		{
+			"GroupId": "D_AhabSyndication_Casino_Offer",
+			"Items": [
+				{
+					"Actor": "NTG_Mem_AhabSyndication_CasinoOwner",
+					"Target": "PCP_Knight",
+					"Side": "R",
+					"Text": "{1}! Come in and welcome!"
+				},
+				{
+					"Actor": "NTG_Mem_AhabSyndication_CasinoOwner",
+					"Side": "R",
+					"Text": "I can match you up with one of our high-stakes games."
+				},
+				{
+					"Actor": "NTG_Mem_AhabSyndication_CasinoOwner",
+					"Side": "R",
+					"Text": "How large a stake would you like to place in the game?"
+				},
+				{
+					"Actor": "NAR_",
+					"Text": "The game will take some time, along with cautious travel time. The Cyber Knight will be unavailable for 24 hours while playing."
+				}
+			]
+		},
+		{
+			"GroupId": "D_AhabSyndication_Casino_Delay",
+			"Items": [
+				{
+					"Actor": "PCP_Knight",
+					"Text": "I'm just looking around today."
+				}
+			]
+		},
+		{
+			"GroupId": "D_AhabSyndication_Casino_GameStart",
+			"Items": [
+				{
+					"Actor": "NTG_Mem_AhabSyndication_CasinoOwner",
+					"Side": "R",
+					"Text": "Excellent! Come right this way."
+				},
+				{
+					"Actor": "NTG_Mem_AhabSyndication_CasinoOwner",
+					"Side": "R",
+					"PreState1": "EQL_100_Temp_AhabSyndication_Casino_Stake",
+					"Text": "$100k has been withdrawn from your account. Any winnings will be deposited in 24 hours, after the game."
+				},
+				{
+					"Actor": "NTG_Mem_AhabSyndication_CasinoOwner",
+					"Side": "R",
+					"PreState1": "EQL_200_Temp_AhabSyndication_Casino_Stake",
+					"Text": "$200k has been withdrawn from your account. Any winnings will be deposited in 24 hours, after the game."
+				},
+				{
+					"Actor": "NTG_Mem_AhabSyndication_CasinoOwner",
+					"Side": "R",
+					"PreState1": "EQL_400_Temp_AhabSyndication_Casino_Stake",
+					"Text": "$400k has been withdrawn from your account. Any winnings will be deposited in 24 hours, after the game."
+				},
+				{
+					"Actor": "NTG_Mem_AhabSyndication_CasinoOwner",
+					"Side": "R",
+					"PreState1": "EQL_800_Temp_AhabSyndication_Casino_Stake",
+					"Text": "$800k has been withdrawn from your account. Any winnings will be deposited in 24 hours, after the game."
+				}
+			]
+		},
+		{
+			"GroupId": "D_AhabSyndication_Casino_PlayingGame",
+			"Items": [
+				{
+					"Actor": "PCP_Knight",
+					"Side": "R",
+					"Text": "The game isn't over yet."
+				}
+			]
+		},
+		{
+			"GroupId": "D_AhabSyndication_Casino_Results",
+			"Items": [
+				{
+					"Actor": "PCP_Knight",
+					"Text": "The game is over."
+				}
+			]
+		},
+		{
+			"GroupId": "D_AhabSyndication_Casino_EndGame",
+			"Items": [
+				{
+					"Actor": "NTG_Mem_AhabSyndication_CasinoOwner",
+					"Side": "R",
+					"Text": "I hope you enjoyed the game!"
+				},
+				{
+					"Actor": "PCP_Knight",
+					"PreState1": "LTE_3_Temp_AhabSyndication_Casino_WinState",
+					"Text": "You win some, you lose some."
+				},
+				{
+					"Actor": "PCP_Knight",
+					"PreState1": "EQL_4_Temp_AhabSyndication_Casino_WinState",
+					"Text": "That was a lot of fun. Thank you."
+				},
+				{
+					"Actor": "PCP_Knight",
+					"PreState1": "EQL_5_Temp_AhabSyndication_Casino_WinState",
+					"Text": "That was a lot of fun! Thank you."
+				},
+				{
+					"Actor": "PCP_Knight",
+					"PreState1": "EQL_6_Temp_AhabSyndication_Casino_WinState",
+					"Text": "An excellent game. I'll be back."
+				},
+				{
+					"Actor": "PCP_Knight",
+					"PreState1": "EQL_7_Temp_AhabSyndication_Casino_WinState",
+					"Text": "Best game ever!"
+				},
+				{
+					"Actor": "NAR_",
+					"PreState1": "LTE_1_Temp_AhabSyndication_Casino_WinState",
+					"Text": "You lost everything. Next time will be better."
+				},
+				{
+					"Actor": "NAR_",
+					"PreState1": "EQL_2_Temp_AhabSyndication_Casino_WinState",
+					"Text": "You lost half your stake before pulling out."
+				},
+				{
+					"Actor": "NAR_",
+					"PreState1": "EQL_3_Temp_AhabSyndication_Casino_WinState",
+					"Text": "You lost some Digitals but played well enugh."
+				},
+				{
+					"Actor": "NAR_",
+					"PreState1": "EQL_4_Temp_AhabSyndication_Casino_WinState",
+					"Text": "You won some and lost some and finally broke even. Good game."
+				},
+				{
+					"Actor": "NAR_",
+					"PreState1": "EQL_5_Temp_AhabSyndication_Casino_WinState",
+					"Text": "You came away with a little more than you started with. Very good."
+				},
+				{
+					"Actor": "NAR_",
+					"PreState1": "EQL_6_Temp_AhabSyndication_Casino_WinState",
+					"Text": "You doubled your original stake! Time to cash out."
+				},
+				{
+					"Actor": "NAR_",
+					"PreState1": "EQL_7_Temp_AhabSyndication_Casino_WinState",
+					"Text": "You swept the table and took the entire pot! That's a nice pile of Digitals!"
+				},
+				{
+					"Actor": "NAR_",
+					"PreState1": "EQL_50_Temp_AhabSyndication_Casino_Win",
+					"Text": "$50k has been deposited to your account."
+				},
+				{
+					"Actor": "NAR_",
+					"PreState1": "EQL_75_Temp_AhabSyndication_Casino_Win",
+					"Text": "$75k has been deposited to your account."
+				},
+				{
+					"Actor": "NAR_",
+					"PreState1": "EQL_100_Temp_AhabSyndication_Casino_Win",
+					"Text": "$100k has been deposited to your account."
+				},
+				{
+					"Actor": "NAR_",
+					"PreState1": "EQL_150_Temp_AhabSyndication_Casino_Win",
+					"Text": "$150k has been deposited to your account."
+				},
+				{
+					"Actor": "NAR_",
+					"PreState1": "EQL_200_Temp_AhabSyndication_Casino_Win",
+					"Text": "$200k has been deposited to your account."
+				},
+				{
+					"Actor": "NAR_",
+					"PreState1": "EQL_300_Temp_AhabSyndication_Casino_Win",
+					"Text": "$300k has been deposited to your account."
+				},
+				{
+					"Actor": "NAR_",
+					"PreState1": "EQL_400_Temp_AhabSyndication_Casino_Win",
+					"Text": "$400k has been deposited to your account."
+				},
+				{
+					"Actor": "NAR_",
+					"PreState1": "EQL_600_Temp_AhabSyndication_Casino_Win",
+					"Text": "$600k has been deposited to your account."
+				},
+				{
+					"Actor": "NAR_",
+					"PreState1": "EQL_800_Temp_AhabSyndication_Casino_Win",
+					"Text": "$800k has been deposited to your account."
+				},
+				{
+					"Actor": "NAR_",
+					"PreState1": "EQL_1200_Temp_AhabSyndication_Casino_Win",
+					"Text": "$1.2m has been deposited to your account."
+				},
+				{
+					"Actor": "NAR_",
+					"PreState1": "EQL_1600_Temp_AhabSyndication_Casino_Win",
+					"Text": "$1.6m has been deposited to your account."
+				},
+				{
+					"Actor": "NAR_",
+					"PreState1": "EQL_3200_Temp_AhabSyndication_Casino_Win",
+					"Text": "$3.2m has been deposited to your account."
+				},
+				{
+					"Actor": "NAR_",
+					"Text": "You will not be able to play again for 30 days"
+				}
+			]
+		},
+		{
+			"GroupId": "D_AhabSyndication_Casino_Cooldown",
+			"Items": [
+				{
+					"Actor": "NTG_Mem_AhabSyndication_CasinoOwner",
+					"Target": "PCP_Knight",
+					"Side": "R",
+					"Text": "I'm sorry, {1}, I can't possibly fit you in right now. "
+				}
+			]
+		}
+	]
+}

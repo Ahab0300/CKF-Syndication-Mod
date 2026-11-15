@@ -1,0 +1,37 @@
+{
+	"Metadata": {
+		"#": "Seven Dragons Syndicate Blade",
+        "StoryKey": "AhabEspionage_Dragons_SynBlade",
+        "StartingId": 781041201
+	},
+	"ContactBackstory": [
+		{
+			"#": "Seven Dragons Syndicate Blade",
+			"ContactBackstoryId": 781041201,
+			"Group": 781041201,
+			"ContactType": 18,
+			"Status": 1,
+			"InfluenceScore": 4,
+			"PowerLevel": 4,
+			"Cosmetic": 228,
+			"Weight": 1,
+			"Trait1A": "ConTrait_Uninspiring",
+			"Trait1B": "ConTrait_WeakOrginization",
+			"Trait2A": "ConTrait_Brazen",
+			"Trait2B": "ConTrait_QuantumObsession",
+			"ContactLink": "NCP_AhabSyndication_Dragons_SynBlade",
+			"FactionTag": "Faction_SevenDragons",
+			"Tag1": "Faction_Corrupt+Faction_SevenDragons",
+			"Tag2": "Tag_ClubLife",
+			"TagID": "PersonID_NCP_AhabSyndication_Dragons_SynBlade",
+			"Location": "Boston Common Casino",
+			"GivenName": "Charlie"
+		}
+	],
+	"Tag": [
+		{
+			"TagClass": "PersonalID",
+			"TagId": "PersonID_NCP_AhabSyndication_Dragons_SynBlade"
+		}
+	]
+}

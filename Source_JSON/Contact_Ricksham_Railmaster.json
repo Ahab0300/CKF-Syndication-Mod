@@ -1,0 +1,36 @@
+{
+	"Metadata": {
+		"#": "Ricksham Railmaster",
+        "StoryKey": "AhabEspionage_Ricksham_Railmaster",
+        "StartingId": 781041101
+	},
+	"ContactBackstory": [
+		{
+			"#": "a Ricksham Railmaster",
+            "ContactBackstoryId": 781041101,
+			"Group": 781041101,
+			"ContactType": 781040101,
+			"Status": 1,
+			"InfluenceScore": 4,
+			"PowerLevel": 4,
+			"Cosmetic": 228,
+			"Weight": 1,
+			"Trait1A": "ConTrait_Greedy",
+			"Trait1B": "ConTrait_Addict",
+			"Trait2A": "ConTrait_Collector",
+			"Trait2B": "ConTrait_Cooker",
+			"ContactLink": "NCP_AhabSyndication_Ricksham_Railmaster",
+            "FactionTag": "Faction_Ricksham",
+            "Tag1": "Faction_Corrupt+Faction_Ricksham",
+			"Tag2": "Tag_HatesNBZ",
+			"TagID": "PersonID_NCP_AhabSyndication_Ricksham_Railmaster",
+			"GivenName": "Bravo"
+		}
+	],
+	"Tag": [
+		{
+			"TagClass": "PersonalID",
+			"TagId": "PersonID_NCP_AhabSyndication_Ricksham_Railmaster"
+		}
+	]
+}

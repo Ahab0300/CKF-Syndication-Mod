@@ -1,0 +1,63 @@
+{
+    "Metadata": {
+        "#": "Syndicate Factions",
+        "StoryKey": "AhabEspionage_Syndication",
+        "StartingId": 781040101
+    },
+    "ContactType": [
+        {
+            "ContactTypeId": 781040101,
+            "Class": 1,
+            "Version": 1,
+            "Heat": 50,
+            "Svc1": 2,
+            "Lvl1": 1,
+            "Svc2": 8,
+            "Lvl2": 1,
+            "Svc3": 20,
+            "Lvl3": 1,
+            "Svc4": 12001,
+            "Lvl4": 1,
+            "Svc5": 12002,
+            "Lvl5": 1,
+            "Svc6": 2023,
+            "Lvl6": 1,
+            "Svc7": 3024,
+            "Lvl7": 1,
+            "TagMatch": "NPC_AhabSyndication_Railmaster",
+            "Name": "Railmaster",
+            "Desc": "Coordinator of all shipping operations"
+        },
+        {
+            "ContactTypeId": 781040201,
+            "Class": 1,
+            "Version": 1,
+            "Heat": 50,
+            "Svc1": 781041401,
+            "Lvl1": 1,
+            "Svc6": 2000,
+            "Lvl6": 1,
+            "Svc7": 3022,
+            "Lvl7": 1,
+            "TagMatch": "NPC_AhabSyndication_CasinoOwner",
+            "Name": "Casino Owner",
+            "Desc": "Owner of a glittering casino that attracts both the high and the low."
+        }
+    ],
+    "Tag": [
+        {
+            "JsonId": 781040101,
+            "TagClass": "ContactType",
+            "TagId": "NPC_AhabSyndication_Railmaster",
+            "ExtraTag": "NPC_Meta_SmuggleFence",
+            "Name": "Railmaster"
+        },
+        {
+            "JsonId": 781040201,
+            "TagClass": "ContactType",
+            "TagId": "NPC_AhabSyndication_CasinoOwner",
+            "ExtraTag": "NPC_Meta_Gambling",
+            "Name": "Casino Owner"
+        }
+    ]
+}

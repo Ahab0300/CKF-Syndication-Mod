@@ -1,0 +1,36 @@
+{
+	"Metadata": {
+		"#": "Ricksham Syndicate Blade",
+        "StoryKey": "AhabEspionage_Ricksham_SynBlade",
+        "StartingId": 781041001
+	},
+	"ContactBackstory": [
+		{
+			"#": "a Ricksham Syndicate Blade",
+            "ContactBackstoryId": 781041001,
+            "Group": 781041001,
+			"ContactType": 18,
+			"Status": 1,
+			"InfluenceScore": 4,
+			"PowerLevel": 4,
+			"Cosmetic": 228,
+			"Weight": 1,
+            "Trait1A": "ConTrait_Paranoid",
+            "Trait1B": "ConTrait_Vengeful",
+            "Trait2A": "ConTrait_HardAsNail",
+            "Trait2B": "ConTrait_Calculating",
+            "ContactLink": "NCP_AhabSyndication_Ricksham_SynBlade",
+            "FactionTag": "Faction_Ricksham",
+            "Tag1": "Faction_Corrupt+Faction_Ricksham",
+            "Tag2": "Tag_Ambitious",
+            "TagID": "PersonID_NCP_AhabSyndication_Ricksham_SynBlade",
+			"GivenName": "Alpha"
+		}
+	],
+	"Tag": [
+		{
+			"TagClass": "PersonalID",
+			"TagId": "PersonID_NCP_AhabSyndication_Ricksham_SynBlade"
+		}
+	]
+}

@@ -1,0 +1,42 @@
+{
+    "Metadata": {
+        "#": "Syndicate Factions",
+        "StoryKey": "AhabEspionage_Syndication",
+        "StartingId": 781040001
+    },
+    "Faction": [
+        {
+            "#": "Change the ProcGenSelect field for Ricksham and Seven Dragons to let the Casting Director use them",
+            "FactionId": 18,
+            "ProcGen": 1,
+            "SQL": "update"
+        },
+        {
+            "#": "Change the ProcGenSelect field for Ricksham and Seven Dragons to let the Casting Director use them",
+            "FactionId": 23,
+            "ProcGen": 1,
+            "SQL": "update"
+        },
+        {
+            "FactionId": 781040001,
+            "Class": 4,
+            "ProcGen": 1,
+            "Tag": "Faction_Yakuza",
+            "Name": "Yakuza",
+            "ShortName": "Yakuza",
+            "ShortName2": "Yak"
+        }
+    ],
+    "Tag": [
+        {
+            "JsonId": 781040001,
+            "TagClass": "FactionOrigin",
+            "Hidden": "Yes",
+            "TagId": "Faction_Yakuza",
+            "ExtraTag": "Faction_Syndicates",
+            "Legwork": "Yakuza",
+            "Name": "Yakuza",
+            "Desc": "Faction: Yakuza"
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+	"Metadata": {
+		"#": "Yakuza Syndicate Blade",
+        "StoryKey": "AhabEspionage_Yakuza_SynBlade",
+        "StartingId": 781041601
+	},
+	"ContactBackstory": [
+		{
+			"#": "Yakuza Syndicate Blade",
+			"ContactBackstoryId": 781041601,
+			"Group": 781041601,
+			"ContactType": 18,
+			"Status": 1,
+			"InfluenceScore": 4,
+			"PowerLevel": 4,
+			"Cosmetic": 228,
+			"Weight": 1,
+			"Trait1A": "ConTrait_GunNut",
+			"Trait1B": "ConTrait_Cooker",
+			"Trait2A": "ConTrait_Bellicose",
+			"Trait2B": "ConTrait_Impatient",
+			"ContactLink": "NCP_AhabSyndication_Yakuza_SynBlade",
+			"FactionTag": "Faction_AhabSyndication_Yakuza",
+			"Tag1": "Faction_Corrupt+Faction_AhabSyndication_Yakuza",
+			"Tag2": "Tag_Ruthless",
+			"TagID": "PersonID_NCP_AhabSyndication_Yakuza_SynBlade",
+			"GivenName": "Golf"
+		}
+	],
+	"Tag": [
+		{
+			"TagClass": "PersonalID",
+			"TagId": "PersonID_NCP_AhabSyndication_Yakuza_SynBlade"
+		}
+	]
+}

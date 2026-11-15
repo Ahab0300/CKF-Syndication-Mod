@@ -1,0 +1,36 @@
+{
+	"Metadata": {
+		"#": "Yakuza Syndicate Financier",
+        "StoryKey": "AhabEspionage_Yakuza_SynFinance",
+        "StartingId": 781041701
+	},
+	"ContactBackstory": [
+		{
+			"#": "Yakuza Syndicate Financier",
+			"ContactBackstoryId": 781041701,
+			"Group": 781041701,
+			"ContactType": 19,
+			"Status": 1,
+			"InfluenceScore": 4,
+			"PowerLevel": 4,
+			"Cosmetic": 228,
+			"Weight": 1,
+			"Trait1A": "ConTrait_Skeptical",
+			"Trait1B": "ConTrait_Guarded",
+			"Trait2A": "ConTrait_OpsFirst",
+			"Trait2B": "ConTrait_EasyToPlease",
+			"ContactLink": "NCP_AhabSyndication_Yakuza_SynFinance",
+			"FactionTag": "Faction_AhabSyndication_Yakuza",
+			"Tag1": "Faction_Lawful+Faction_AhabSyndication_Yakuza",
+			"Tag2": "Tag_Honorable",
+			"TagID": "PersonID_NCP_AhabSyndication_Yakuza_SynFinance",
+			"GivenName": "Hotel"
+		}
+	],
+	"Tag": [
+		{
+			"TagClass": "PersonalID",
+			"TagId": "PersonID_NCP_AhabSyndication_Yakuza_SynFinance"
+		}
+	]
+}

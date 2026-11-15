@@ -1,0 +1,37 @@
+{
+	"Metadata": {
+		"#": "Seven Dragons Syndicate Financier",
+        "StoryKey": "AhabEspionage_Dragons_SynFinance",
+        "StartingId": 781041301
+	},
+	"ContactBackstory": [
+		{
+			"#": "a Seven Dragons Syndicate Financier",
+			"ContactBackstoryId": 781041301,
+			"Group": 781041301,
+			"ContactType": 19,
+			"Status": 1,
+			"InfluenceScore": 4,
+			"PowerLevel": 4,
+			"Cosmetic": 228,
+			"Weight": 1,
+			"Trait1A": "ConTrait_LowTemp",
+			"Trait1B": "ConTrait_PowerHungry",
+			"Trait2A": "ConTrait_Calculating",
+			"Trait2B": "ConTrait_DetailOriented",
+			"ContactLink": "NCP_AhabSyndication_Dragons_SynFinance",
+			"FactionTag": "Faction_SevenDragons",
+			"Tag1": "Faction_Lawful+Faction_SevenDragons",
+			"Tag2": "Tag_HatesTraitors",
+			"TagID": "PersonID_NCP_AhabSyndication_Dragons_SynFinance",
+			"Location": "Boston Common Casino",
+			"GivenName": "Delta"
+		}
+	],
+	"Tag": [
+		{
+			"TagClass": "PersonalID",
+			"TagId": "PersonID_NCP_AhabSyndication_Dragons_SynFinance"
+		}
+	]
+}
