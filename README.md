@@ -25,7 +25,8 @@ Syndication Mod adds the following to the base game:
 * Ricksham syndicate is available to the Casting Director for missions as actor or target
 * Seven Dragons syndicate (present in the base game data but undeveloped) is available to the Casting Director
 * The Yakuza (a syndicate faction in Cyber Knights Classic) is added to the game and available to the Casting Director
-* New Contacts added for Ricksham, Seven Dragons, and Yakuza
+* New Contacts added for Ricksham, Seven Dragons, and Yakuza (not yet available)
+* Gambling Service from Seven Dragons Casino Owner
 
 Future development may add some or all of the following:
 * Two or three unique enemy types for each of the five big Syndicates

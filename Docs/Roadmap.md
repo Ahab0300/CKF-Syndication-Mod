@@ -12,3 +12,4 @@ Roadmap for future development of the **Syndication Mod**:
 are already implmented)
 - Add custom appearances to the new Contacts
 - Add post-game bonus events to Gambling service
+- Add 2 or 3 unique Enemies for each Syndicate during Missions
