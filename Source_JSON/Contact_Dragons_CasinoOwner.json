@@ -800,7 +800,7 @@
 				{
 					"Type": "ContactMeta",
 					"Actor": "NTG_Mem_AhabSyndication_CasinoOwner",
-					"Influence": "4"
+					"Influence": 2
 				},
 				{
 					"Type": "GameState",
@@ -1227,6 +1227,11 @@
 					"Actor": "NAR_",
 					"PreState1": "EQL_3200_Temp_AhabSyndication_Casino_Win",
 					"Text": "<style=DialogTerm>$3.2m has been deposited to your account.</style>"
+				},
+				{
+					"Actor": "NAR_",
+					"Target": "NTG_Mem_AhabSyndication_CasinoOwner",
+					"Text": "{1} has gained 20% Influence."
 				},
 				{
 					"Actor": "NAR_",
