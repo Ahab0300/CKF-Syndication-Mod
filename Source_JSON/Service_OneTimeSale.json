@@ -1,0 +1,23 @@
+{
+    "Metadata": {
+        "#": "Introduction to Railmaster and his One Time Sales",
+        "StoryKey": "AhabSyndication_OneTimeSale",
+        "StartingId": 781042001
+    },
+    "Block": [
+        {
+            "GroupId": "B_AhabSyndication_OneTimeSale_Start",
+            "Items": [
+                {
+                    "PreDialogPostCondition": "Post_AhabSyndication_OneTimeSale_Intro",
+                    "PostState1": "ADD_TEMP_AhabSyndication_OneTimeSale_Intro",
+                    "PostState2": "ADD_S_AhabSyndication_MetCasinoOwner",
+                    "StoryNode1": "ADD_SN_AhabSyndication_Casino_Intro",
+                    "OnlyRunOnce": "Forever",
+                    "EventId": "Match_AhabSyndication_Casino_Intro",
+                    "EventType": "Vignette"
+                }
+            ]
+        }
+    ]
+}

@@ -870,7 +870,7 @@
 					"Optional": "CreateOrFind",
 					"Backstory": 781041401,
 					"Status": 1,
-					"TagReq1": "NPC_AhabSyndication_CasinoOwner",
+					"TagReq1": "PersonID_NCP_AhabSyndication_Dragons_CasinoOwner",
 					"TagMatch": "Mem_AhabSyndication_CasinoOwner",
 					"Actor": "NCT_AhabSyndication_CasinoOwner",
 					"DebugName": "Dragons Casino Owner"

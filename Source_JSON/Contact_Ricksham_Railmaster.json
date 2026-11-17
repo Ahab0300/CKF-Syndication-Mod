@@ -1,13 +1,13 @@
 {
 	"Metadata": {
 		"#": "Ricksham Railmaster",
-        "StoryKey": "AhabEspionage_Ricksham_Railmaster",
-        "StartingId": 781041101
+		"StoryKey": "AhabSyndication_Ricksham_Railmaster",
+		"StartingId": 781041101
 	},
 	"ContactBackstory": [
 		{
 			"#": "a Ricksham Railmaster",
-            "ContactBackstoryId": 781041101,
+			"ContactBackstoryId": 781041101,
 			"Group": 781041101,
 			"ContactType": 781040101,
 			"Status": 1,
@@ -20,8 +20,8 @@
 			"Trait2A": "ConTrait_Collector",
 			"Trait2B": "ConTrait_Cooker",
 			"ContactLink": "NCP_AhabSyndication_Ricksham_Railmaster",
-            "FactionTag": "Faction_Ricksham",
-            "Tag1": "Faction_Corrupt+Faction_Ricksham",
+			"FactionTag": "Faction_Ricksham",
+			"Tag1": "Faction_Corrupt+Faction_Ricksham",
 			"Tag2": "Tag_HatesNBZ",
 			"TagID": "PersonID_NCP_AhabSyndication_Ricksham_Railmaster",
 			"GivenName": "Bravo"
@@ -31,6 +31,679 @@
 		{
 			"TagClass": "PersonalID",
 			"TagId": "PersonID_NCP_AhabSyndication_Ricksham_Railmaster"
+		},
+		{
+			"TagClass": "Hidden",
+			"TagId": "Mem_AhabSyndication_LegRailmaster"
+		},
+		{
+			"TagClass": "Hidden",
+			"TagId": "LegMem_AhabSyndication_LegRailmaster"
+		}
+	],
+	"Legwork": [
+		{
+			"TagChance1": 80,
+			"TagChance2": 70,
+			"TagChance3": 70,
+			"TagChance4": 55,
+			"TagChance5": 55,
+			"TagReq1": "Faction_Syndicates",
+			"TagReq2": "LegMem_LegSonOD",
+			"TagReq3": "LegMem_PowerPlayRicksham",
+			"TagReq4": "Skills_StreetSecurity",
+			"TagReq5": "Job_Combat",
+			"TagMatch": "LegMem_AhabSyndication_LegRailmaster",
+			"Actor": "PLG_AhabSyndication_LegRailmaster",
+			"Target": "NCT_AhabSyndication_LegRailmaster",
+			"StoryNodeId": "SN_AhabSyndication_LegRailmaster_Legwork",
+			"SuccessType": "InfluenceAndFavor",
+			"FailType": "FailRepeat",
+			"ContactOwner": "NCT_AhabSyndication_LegRailmaster",
+			"BlockSuccess": "B_AhabSyndication_LegRailmaster_Win",
+			"BlockFail": "B_AhabSyndication_LegRailmaster_Loss",
+			"Title": "Long Train Runnin'",
+			"Desc": "{1} is looking for information about a rumored Ricksham exclusive sale.",
+			"Win": "You have found the Ricksham Railmaster running the sale.",
+			"Fail": "You haven't found anything except rumors."
+		}
+	],
+	"StoryNode": [
+		{
+			"GroupId": "SN_AhabSyndication_LegRailmaster",
+			"Items": [
+				{
+					"StoryNodeId": "SN_AhabSyndication_LegRailmaster_Start",
+					"ExpirationBlock": "B_AhabSyndication_LegRailmaster_Start",
+					"ExpirationTurns": 20,
+					"ExpirationRandom": 16
+				},
+				{
+					"StoryNodeId": "SN_AhabSyndication_LegRailmaster_Delayed",
+					"ExpirationBlock": "B_AhabSyndication_LegRailmaster_DelayForce",
+					"ExpirationTurns": 20,
+					"ExpirationRandom": 16
+				},
+				{
+					"StoryNodeId": "SN_AhabSyndication_LegRailmaster_Legwork",
+					"StoryNodeType": "Legwork",
+					"Actor": "PLG_AhabSyndication_LegRailmaster",
+					"ExpirationTurns": 28,
+					"Text": "{0} is following rumors about a special sale by Ricksham Syndicate."
+				},
+				{
+					"StoryNodeId": "SN_AhabSyndication_LegRailmaster_Meeting",
+					"ExpirationBlock": "B_AhabSyndication_LegRailmaster_Meeting",
+					"ExpirationTurns": 8
+				},
+				{
+					"StoryNodeId": "SN_AhabSyndication_LegRailmaster_Cleanup",
+					"ExpirationBlock": "B_AhabSyndication_LegRailmaster_Cleanup",
+					"ExpirationTurns": 2
+				},
+				{
+					"StoryNodeId": "SN_AhabSyndication_LegRailmaster_DelayRestart",
+					"ExpirationBlock": "B_AhabSyndication_LegRailmaster_DelayRestart",
+					"ExpirationTurns": 84,
+					"ExpirationRandom": 28
+				}
+			]
+		}
+	],
+	"StoryMatch": [
+		{
+			"GroupId": "Match_AhabSyndication_LegRailmaster",
+			"Items": [
+				{
+					"Status": 1,
+					"PairRule": "OneOfMany",
+					"TagReq1": "NPC_Meta_SmuggleWeaponry",
+					"TagMatch": "Mem_AhabSyndication_LegRailmaster",
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"PostState": "SET_1_Temp_AhabSyndication_LegRailmaster_Type",
+					"DebugName": "Railmaster for weapon smuggler"
+				},
+				{
+					"Status": 1,
+					"PairRule": "OneOfMany",
+					"TagReq1": "NPC_Meta_Soldiers",
+					"TagMatch": "Mem_AhabSyndication_LegRailmaster",
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"PostState": "SET_2_Temp_AhabSyndication_LegRailmaster_Type",
+					"DebugName": "Railmaster for soldier"
+				},
+				{
+					"Status": 1,
+					"PairRule": "OneOfMany",
+					"TagReq1": "ConTrait_GunNut",
+					"TagMatch": "Mem_AhabSyndication_LegRailmaster",
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"PostState": "SET_3_Temp_AhabSyndication_LegRailmaster_Type",
+					"DebugName": "Railmaster for gun nut"
+				},
+				{
+					"Status": 1,
+					"PairRule": "OneOfMany",
+					"TagReq1": "NPC_Collector",
+					"TagMatch": "Mem_AhabSyndication_LegRailmaster",
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"PostState": "SET_4_Temp_AhabSyndication_LegRailmaster_Type",
+					"DebugName": "Railmaster for collector"
+				}
+			]
+		}
+	],
+	"Block": [
+		{
+			"GroupId": "B_AhabSyndication_LegRailmaster",
+			"Items": [
+				{
+					"Weight": 10,
+					"PreState1": "NOT_Temp_AhabSyndication_LegRailmaster_DelayRestart",
+					"PostState1": "ADD_Temp_AhabSyndication_LegRailmaster_DelayRestart",
+					"StoryNode1": "ADD_SN_AhabSyndication_LegRailmaster_Start",
+					"OnlyRunOnce": "Forever",
+					"EventId": "Match_AhabSyndication_LegRailmaster",
+					"EventType": "Vignette",
+					"Text": "Find the Railmaster"
+				}
+			]
+		},
+		{
+			"GroupId": "B_AhabSyndication_LegRailmaster_Start",
+			"Items": [
+				{
+					"StoryNodeId": "SN_AhabSyndication_LegRailmaster_Start",
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Side": "R",
+					"StoryNode1": "DEL_SN_AhabSyndication_LegRailmaster_Start",
+					"Dialog": "D_AhabSyndication_LegRailmaster_Intro",
+					"EventId": "B_AhabSyndication_LegRailmaster_Choices",
+					"EventType": "Choice",
+					"Text": "Have you heard the rumor about a special sale by Ricksham Syndicate?"
+				}
+			]
+		},
+		{
+			"GroupId": "B_AhabSyndication_LegRailmaster_StartDelayed",
+			"Items": [
+				{
+					"StoryNodeId": "SN_AhabSyndication_LegRailmaster_Delayed",
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Side": "R",
+					"StoryNode1": "DEL_SN_AhabSyndication_LegRailmaster_Delayed",
+					"Dialog": "D_AhabSyndication_LegRailmaster_Intro",
+					"EventId": "B_AhabSyndication_LegRailmaster_Choices",
+					"EventType": "Choice",
+					"Text": "If you don't hurry, the special sale will be over!"
+				}
+			]
+		},
+		{
+			"GroupId": "B_AhabSyndication_LegRailmaster_DelayForce",
+			"Items": [
+				{
+					"PostState1": "ADD_Temp_AhabSyndication_LegRailmaster_DelayForce",
+					"StoryNode1": "DEL_SN_AhabSyndication_LegRailmaster_Delayed",
+					"Dialog": "D_AhabSyndication_LegRailmaster_Intro",
+					"EventId": "B_AhabSyndication_LegRailmaster_Choices",
+					"EventType": "Choice"
+				}
+			]
+		},
+		{
+			"GroupId": "B_AhabSyndication_LegRailmaster_Choices",
+			"Items": [
+				{
+					"Actor": "PCP_Knight",
+					"PreState1": "NOT_Temp_AhabSyndication_LegRailmaster_Chat1",
+					"PostState1": "ADD_Temp_AhabSyndication_LegRailmaster_Chat1",
+					"Dialog": "D_AhabSyndication_LegRailmaster_Chat1",
+					"EventId": "B_AhabSyndication_LegRailmaster_Choices",
+					"EventType": "Choice",
+					"Text": "What do you think will be on sale?"
+				},
+				{
+					"Actor": "PCP_Knight",
+					"PreState1": "NOT_Temp_AhabSyndication_LegRailmaster_Chat2",
+					"PostState1": "ADD_Temp_AhabSyndication_LegRailmaster_Chat2",
+					"Dialog": "D_AhabSyndication_LegRailmaster_Chat2",
+					"EventId": "B_AhabSyndication_LegRailmaster_Choices",
+					"EventType": "Choice",
+					"Text": "Why would Ricksham have a sale?"
+				},
+				{
+					"ChoiceMeta": "Legwork",
+					"StoryNode1": "DEL_SN_AhabSyndication_LegRailmaster_Delayed",
+					"Dialog": "D_AhabSyndication_LegRailmaster_LegStart",
+					"EventId": "SN_AhabSyndication_LegRailmaster_Legwork",
+					"EventType": "Legwork",
+					"Text": "This sounds intriguing. We will start following the rumors."
+				},
+				{
+					"Actor": "PCP_Knight",
+					"Quip": "ProcLeg_Generic_Delay",
+					"ChoiceMeta": "Delay",
+					"PreState1": "NOT_Temp_AhabSyndication_LegRailmaster_DelayForce",
+					"StoryNode1": "ADD_SN_AhabSyndication_LegRailmaster_Delayed",
+					"Dialog": "D_AhabSyndication_LegRailmaster_Delayed",
+					"Text": "{11}"
+				},
+				{
+					"Actor": "PCP_Knight",
+					"Target": "NCT_AhabSyndication_LegRailmaster",
+					"ChoiceMeta": "No",
+					"StoryNode1": "ADD_SN_AhabSyndication_LegRailmaster_Cleanup",
+					"StoryNode2": "DEL_SN_AhabSyndication_LegRailmaster_Delayed",
+					"Dialog": "D_AhabSyndication_LegRailmaster_Reject",
+					"Text": "Chasing rumors isn't what we specialize in."
+				}
+			]
+		},
+		{
+			"GroupId": "B_AhabSyndication_LegRailmaster_Win",
+			"Items": [
+				{
+					"PreDialogPostCondition": "Post_AhabSyndication_LegRailmaster_Win",
+					"StoryNode1": "ADD_SN_AhabSyndication_LegRailmaster_Meeting",
+					"Dialog": "D_AhabSyndication_LegRailmaster_Win"
+				}
+			]
+		},
+		{
+			"GroupId": "B_AhabSyndication_LegRailmaster_Meeting",
+			"Items": [
+				{
+					"Actor": "PTG_LegMem_AhabSyndication_LegRailmaster",
+					"Target": "PCP_Knight", 
+					"Side": "R",
+					"PreDialogPostCondition": "Post_AhabSyndication_LegRailmaster_Meeting",
+					"StoryNodeId": "SN_AhabSyndication_LegRailmaster_Meeting",
+					"StoryNode1": "ADD_SN_AhabSyndication_LegRailmaster_Cleanup",
+					"StoryNode2": "DEL_SN_AhabSyndication_LegRailmaster_Meeting",
+					"Dialog": "D_AhabSyndication_LegRailmaster_Meeting",
+					"Text": "I have set up a meeting with the Ricksham Railmaster."
+				}
+			]
+		},
+		{
+			"GroupId": "B_AhabSyndication_LegRailmaster_Loss",
+			"Items": [
+				{
+					"PostConditionGroup": "Post_AhabSyndication_LegRailmaster_Loss",
+					"StoryNode1": "ADD_SN_AhabSyndication_LegRailmaster_Cleanup",
+					"Dialog": "D_AhabSyndication_LegRailmaster_Loss"
+				}
+			]
+		},
+		{
+			"GroupId": "B_AhabSyndication_LegRailmaster_Cleanup",
+			"Items": [
+				{
+					"PostConditionGroup": "Post_AhabSyndication_LegRailmaster_Cleanup",
+					"PostState1": "DEL_Temp_AhabSyndication_LegRailmaster_Chat1",
+					"PostState2": "DEL_Temp_AhabSyndication_LegRailmaster_Chat2",
+					"StoryNode1": "ADD_SN_AhabSyndication_LegRailmaster_DelayRestart"
+				}
+			]
+		},
+		{
+			"GroupId": "B_AhabSyndication_LegRailmaster_DelayRestart",
+			"Items": [
+				{"PostState1": "DEL_Temp_AhabSyndication_LegRailmaster_DelayRestart"}
+			]
+		}
+	],
+	"BlockCondition": [
+		{
+			"GroupId": "Post_AhabSyndication_LegRailmaster_Win",
+			"Items": [
+				{
+					"Type": "AddCharacter", 
+					"Actor": "NCP_AhabSyndication_Ricksham_Railmaster",
+					"BackstoryId": -1,
+					"BackstoryHint": 781041101
+				}
+			]
+		},
+		{
+			"GroupId": "Post_AhabSyndication_LegRailmaster_Meeting",
+			"Items": [
+				{
+					"Type": "AddCharacter",
+					"Actor": "NCP_AhabSyndication_Ricksham_SynBlade",
+					"BackstoryId": -1,
+					"BackstoryHint": 781041001
+				}
+			]
+		},
+		{
+			"GroupId": "Post_AhabSyndication_LegRailmaster_Cleanup",
+			"Items": [
+				{
+					"Type": "TempStoryId",
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Remove": "true"
+				}
+			]
+		},
+		{
+			"GroupId": "Post_AhabSyndication_LegRailmaster_Loss",
+			"Items": [
+				{
+					"ConditionType": "ContactMeta",
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"ConditionValue": 1,
+					"OptionId": 1
+				}
+			]
+		}
+	],
+	"Dialog": [
+		{
+			"GroupId": "D_AhabSyndication_LegRailmaster_Intro",
+			"Items": [
+				{
+					"Actor": "PCP_Knight",
+					"Target": "NCT_AhabSyndication_LegRailmaster",
+					"Text": "No, we haven't heard anything. What have you heard?"
+				},
+				{
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Side": "R",
+					"Text": "It's hard to find any facts, but Ricksham may be setting up some kind of special sale."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Side": "R",
+					"Text": "Some rare product they have come across. And the sale will have a limited audience."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Side": "R",
+					"PreState1": "EQL_1_Temp_AhabSyndication_LegRailmaster_Type",
+					"Text": "If it is a weapon, I want to see it."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Side": "R",
+					"PreState1": "EQL_2_Temp_AhabSyndication_LegRailmaster_Type",
+					"Text": "I'm always looking for good gear."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Side": "R",
+					"PreState1": "EQL_3_Temp_AhabSyndication_LegRailmaster_Type",
+					"Text": "I'd love a new weapon for my collection."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Side": "R",
+					"PreState1": "EQL_4_Temp_AhabSyndication_LegRailmaster_Type",
+					"Text": "Whatever it is, I want it!"
+				},
+				{
+					"Actor": "PCP_Face",
+					"Side": "R",
+					"Text": "What would you like us to do?"
+				},
+				{
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Side": "R",
+					"Text": "Track down the rumors. Find out who is running this event so I can try to get in."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Side": "R",
+					"Text": "Someone has to know, and I think you can find out."
+				}
+			]
+		},
+		{
+			"GroupId": "D_AhabSyndication_LegRailmaster_LegStart",
+			"Items": [
+				{
+					"Actor": "PLG_AhabSyndication_LegRailmaster",
+					"Quip": "ProcLeg_AhabSyndication_LegRailmaster_Start",
+					"Side": "R",
+					"Text": "{11}"
+				},
+				{
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Side": "R",
+					"Text": "Just ask around and follow the rumors. No need for any coercion."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Side": "R",
+					"Text": "Anyone who knows anything is keeping it close to their chest."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Side": "R",
+					"Text": "You will have to go digging deep to find anything."
+				}
+			]
+		},
+		{
+			"GroupId": "D_AhabSyndication_LegRailmaster_Chat1",
+			"Items": [
+				{
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Side": "R",
+					"Text": "Who knows? Armor? Weapons? Weapon mods? No one seems to know. Maybe it's just 20th Century silverware?"
+				},
+				{
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Side": "R",
+					"PreState1": "EQL_2_Temp_AhabSyndication_LegRailmaster_Type",
+					"Text": "Ricksham is keeping a tight lid on any real information."
+				}
+			]
+		},
+		{
+			"GroupId": "D_AhabSyndication_LegRailmaster_Chat2",
+			"Items": [
+				{
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Side": "R",
+					"Text": "A good question. Ricksham usually doesn't do distribution."
+				},
+				{
+					"Actor": "PCP_Face",
+					"Side": "R",
+					"Text": "They pass their goods along to others to distribute."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Side": "R",
+					"Text": "My guess is they came across a small lot of something really special."
+				}
+			]
+		},
+		{
+			"GroupId": "D_AhabSyndication_LegRailmaster_Delayed",
+			"Items": [
+				{
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Target": "PCP_Knight",
+					"Side": "R",
+					"Quip": "ProcLeg_Generic_DelayDialog",
+					"Text": "{11}"
+				}
+			]
+		},
+		{
+			"GroupId": "D_AhabSyndication_LegRailmaster_Reject",
+			"Items": [
+				{
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Target": "PCP_Knight",
+					"Side": "R",
+					"Quip": "ProcLeg_Generic_RejectDialog",
+					"Text": "{11}"
+				}
+			]
+		},
+		{
+			"GroupId": "D_AhabSyndication_LegRailmaster_Win",
+			"Items": [
+				{
+					"Actor": "PTG_LegMem_AhabSyndication_LegRailmaster",
+					"Text": "It took a lot of prying, and some cash to loosen tongues."
+				},
+				{
+					"Actor": "PTG_LegMem_AhabSyndication_LegRailmaster",
+					"Text": "I finally tracked the rumors down."
+				},
+				{
+					"Actor": "PTG_LegMem_AhabSyndication_LegRailmaster",
+					"Target": "NCP_AhabSyndication_Ricksham_Railmaster",
+					"Text": "The person running this big sale is named {1}."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Side": "R",
+					"Text": "Who is that?"
+				},
+				{
+					"Actor": "PTG_LegMem_AhabSyndication_LegRailmaster",
+					"Target": "NCP_AhabSyndication_Ricksham_Railmaster",
+					"Text": "{6} is a Railmaster for Ricksham Syndicate."
+				},
+				{
+					"Actor": "PTG_LegMem_AhabSyndication_LegRailmaster",
+					"Text": "The Railmaster runs Ricksham operations in the rail yard."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Side": "R",
+					"Text": "Then that's who I have to talk to."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Side": "R",
+					"Text": "Thank you! I have some calls to make."
+				},
+				{
+					"Actor": "PCP_Knight",
+					"Target": "PTG_LegMem_AhabSyndication_LegRailmaster",
+					"Text": "Good work, {1}."
+				},
+				{
+					"Actor": "PTG_LegMem_AhabSyndication_LegRailmaster",
+					"Side": "R",
+					"Text": "Thanks. Rumors are not exactly my forte."
+				},
+				{
+					"Actor": "PCP_Knight",
+					"Target": "PTG_LegMem_AhabSyndication_LegRailmaster",
+					"Text": "We may have to look into this sale ourselves."
+				},
+				{
+					"Actor": "PCP_Knight",
+					"Target": "PTG_LegMem_AhabSyndication_LegRailmaster",
+					"Text": "{1}, see if you can set up a meeting."
+				},
+				{
+					"Actor": "PTG_LegMem_AhabSyndication_LegRailmaster",
+					"Target": "NCP_AhabSyndication_Ricksham_Railmaster",
+					"Side": "R",
+					"Text": "I'll contact {6} right away."
+				},
+				{
+					"Actor": "NAR_",
+					"Target": "NCT_AhabSyndication_LegRailmaster",
+					"Quip": "Generic_Legwork_InfluenceAndFavor",
+					"Text": "{11}"
+				}
+			]
+		},
+		{
+			"GroupId": "D_AhabSyndication_LegRailmaster_Meeting",
+			"Items": [
+				{
+					"Actor": "PCP_Knight",
+					"Target": "NCP_AhabSyndication_Ricksham_Railmaster",
+					"Text": "All right. Let's meet {1} now."
+				},
+				{
+					"Actor": "NCP_AhabSyndication_Ricksham_Railmaster",
+					"Side": "R",
+					"Text": "Well, this is a surprise. A <style=DialogName>Cyber Knight</style>!"
+				},
+				{
+					"Actor": "NCP_AhabSyndication_Ricksham_Railmaster",
+					"Side": "R",
+					"Text": "What brings you to the rail yards?"
+				},
+				{
+					"Actor": "PCP_Knight",
+					"Text": "We have heard that you are about to hold an exclusive sale."
+				},
+				{
+					"Actor": "PCP_Knight",
+					"Text": "We thought we would look into the rumors."
+				},
+				{
+					"Actor": "NCP_AhabSyndication_Ricksham_Railmaster",
+					"Side": "R",
+					"Text": "You must have good contacts. We are keeping that quite secret."
+				},
+				{
+					"Actor": "NCP_AhabSyndication_Ricksham_Railmaster",
+					"Side": "R",
+					"Text": "Yes, we are holding a special sale soon."
+				},
+				{
+					"Actor": "NCP_AhabSyndication_Ricksham_Railmaster",
+					"Side": "R",
+					"Text": "We hold these private sales whenever we come across a particularly interesting small shipment."
+				},
+				{
+					"Actor": "PCP_Face",
+					"Text": "What kind of products?"
+				},
+				{
+					"Actor": "NCP_AhabSyndication_Ricksham_Railmaster",
+					"Side": "R",
+					"Text": "Sometimes very rare treasures or luxury goods. But I think you are interested in the military goods?"
+				},
+				{
+					"Actor": "NCP_AhabSyndication_Ricksham_Railmaster",
+					"Side": "R",
+					"Text": "We sometimes find special deliveries of armor, weapons, weapon mods."
+				},
+				{
+					"Actor": "NCP_AhabSyndication_Ricksham_Railmaster",
+					"Side": "R",
+					"Text": "Rare stuff you can hardly ever find."
+				},
+				{
+					"Actor": "PCP_Knight",
+					"Text": "Yes, we would be interested in that."
+				},
+				{
+					"Actor": "NCP_AhabSyndication_Ricksham_Railmaster",
+					"Side": "R",
+					"Text": "I think I can extend an invitation for a <style=DialogName>Cyber Knight</style>."
+				},
+				{
+					"Actor": "NCP_AhabSyndication_Ricksham_Railmaster",
+					"Side": "R",
+					"Text": "We have something up for sale right now. And I'll let you know if we get anything else you might be interested in."
+				},
+				{
+					"Actor": "NCP_AhabSyndication_Ricksham_Railmaster",
+					"Target": "NCP_AhabSyndication_Ricksham_SynBlade",
+					"Side": "R",
+					"Text": "Oh, and you should meet {1}; {3} runs security for the events."
+				},
+				{
+					"Actor": "PCP_Knight",
+					"Text": "Thank you. I'm looking forward to seeing what you have."
+				}
+			]
+		},
+		{
+			"GroupId": "D_AhabSyndication_LegRailmaster_Loss",
+			"Items": [
+				{
+					"Actor": "PCP_Face",
+					"Side": "R",
+					"Target": "PTG_LegMem_AhabSyndication_LegRailmaster",
+					"Text": "{1} is back but the news isn't good."
+				},
+				{
+					"Actor": "PCP_Knight",
+					"Text": "Did you find out anything about this Ricksham sale?"
+				},
+				{
+					"Actor": "PTG_LegMem_AhabSyndication_LegRailmaster",
+					"Side": "R",
+					"Text": "No. I shook every tree I could and all I got was nothing. No one is talking on the street."
+				},
+				{
+					"Actor": "NCT_AhabSyndication_LegRailmaster",
+					"Side": "R",
+					"Text": "I was afraid of that. Ricksham must have clamped down hard on the rumors."
+				},
+				{
+					"Actor": "NAR_",
+					"Target": "PTG_LegMem_AhabSyndication_LegRailmaster",
+					"Text": "We have gained <style=DialogTerm>+20% Heat</style> for failing this <style=DialogTerm>Legwork</style>."
+				}
+			]
+		}
+	],
+	"DialogQuip": [
+		{
+			"GroupId": "ProcLeg_AhabSyndication_LegRailmaster_Start",
+			"Items": [
+				{"Text": "Chasing rumors? Don't you have something better for me to do?"},
+				{"Text": "How hard do you want me to push this?"},
+				{"Text": "Sifting gossip. Wonderful. Just how I wanted to spend the week."}
+			]
 		}
 	]
 }
