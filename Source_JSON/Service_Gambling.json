@@ -54,6 +54,51 @@
 			"Desc": "Offers exclusive gambling games for high stakes"
 		}
 	],
+	"Legwork": [
+		{
+			"TagChance1": 100,
+			"TagReq1": "JobMem_Knight",
+			"TagMatch": "LegMem_AhabSyndication_Gambling",
+			"Actor": "PLG_AhabSyndication_Gambling",
+			"Target": "NTG_Mem_AhabSyndication_CasinoOwner",
+			"StoryNodeId": "SN_AhabSyndication_Gambling_Legwork",
+			"SuccessType": "InfluenceAndHype",
+			"FailType": "FailRepeat",
+			"ContactOwner": "NTG_Mem_AhabSyndication_CasinoOwner",
+			"BlockSuccess": "B_AhabSyndication_Gambling_Results",
+			"Title": "Texas Holdem",
+			"Desc": "{0} is engaged in high-stakes gambling at the Boston Common Casino.",
+			"Win": "The game is over."
+		}
+	],
+	"StoryNode": [
+		{
+			"GroupId": "SN_AhabSyndication_Gambling",
+			"Items": [
+				{
+					"StoryNodeId": "SN_AhabSyndication_Gambling_Offer",
+					"Actor": "NTG_Mem_AhabSyndication_CasinoOwner",
+					"DebugText": "Buy into a high-stakes game",
+					"ExpirationTurns": -1
+				},
+				{
+					"StoryNodeId": "SN_AhabSyndication_Gambling_Legwork",
+					"StoryNodeType": "Legwork",
+					"Actor": "PCP_Knight",
+					"DebugText": "High-stakes game in progress",
+					"ExpirationTurns": 4,
+					"Text": "{0} is engaged in high-stakes gambling at the Boston Common Casino."
+				},
+				{
+					"StoryNodeId": "SN_AhabSyndication_Gambling_Cooldown",
+					"Actor": "NTG_Mem_AhabSyndication_CasinoOwner",
+					"ExpirationStoryNode": "SN_AhabSyndication_Gambling_Offer",
+					"DebugText": "High-stakes game on cooldown",
+					"ExpirationTurns": 120
+				}
+			]
+		}
+	],
 	"Block": [
 		{
 			"GroupId": "B_AhabSyndication_Gambling_Offer",
@@ -79,7 +124,7 @@
 					"PostConditionGroup": "Post_AhabSyndication_Gambling_Stake100",
 					"PostState1": "SET_100_Temp_AhabSyndication_Gambling_Stake",
 					"Dialog": "D_AhabSyndication_Gambling_Choices",
-					"EventId": "B_AhabSyndication_Gambling_GameStart",
+					"EventId": "B_AhabSyndication_Gambling_Legwork",
 					"EventType": "TalkOn",
 					"Text": "$100k"
 				},
@@ -89,7 +134,7 @@
 					"PostConditionGroup": "Post_AhabSyndication_Gambling_Stake200",
 					"PostState1": "SET_200_Temp_AhabSyndication_Gambling_Stake",
 					"Dialog": "D_AhabSyndication_Gambling_Choices",
-					"EventId": "B_AhabSyndication_Gambling_GameStart",
+					"EventId": "B_AhabSyndication_Gambling_Legwork",
 					"EventType": "TalkOn",
 					"Text": "$200k"
 				},
@@ -99,7 +144,7 @@
 					"PostConditionGroup": "Post_AhabSyndication_Gambling_Stake400",
 					"PostState1": "SET_800_Temp_AhabSyndication_Gambling_Stake",
 					"Dialog": "D_AhabSyndication_Gambling_Choices",
-					"EventId": "B_AhabSyndication_Gambling_GameStart",
+					"EventId": "B_AhabSyndication_Gambling_Legwork",
 					"EventType": "TalkOn",
 					"Text": "$400k"
 				},
@@ -109,7 +154,7 @@
 					"PostConditionGroup": "Post_AhabSyndication_Gambling_Stake800",
 					"PostState1": "SET_800_Temp_AhabSyndication_Gambling_Stake",
 					"Dialog": "D_AhabSyndication_Gambling_Choices",
-					"EventId": "B_AhabSyndication_Gambling_GameStart",
+					"EventId": "B_AhabSyndication_Gambling_Legwork",
 					"EventType": "TalkOn",
 					"Text": "$800k"
 				},
@@ -122,13 +167,13 @@
 			]
 		},
 		{
-			"GroupId": "B_AhabSyndication_Gambling_GameStart",
+			"GroupId": "B_AhabSyndication_Gambling_Legwork",
 			"Items": [
 				{
 					"StoryNode1": "DEL_SN_AhabSyndication_Gambling_Offer",
 					"StoryNode2": "ADD_SN_AhabSyndication_Gambling_Cooldown",
-					"StoryNode3": "ADD_SN_AhabSyndication_Gambling_GameStart",
-					"Dialog": "D_AhabSyndication_Gambling_GameStart",
+					"StoryNode3": "ADD_SN_AhabSyndication_Gambling_Legwork",
+					"Dialog": "D_AhabSyndication_Gambling_Legwork",
 					"EventType": "TalkOn"
 				}
 			]
@@ -147,21 +192,10 @@
 			]
 		},
 		{
-			"GroupId": "B_AhabSyndication_Gambling_PlayingGame",
-			"Items": [
-				{
-					"StoryNodeId": "SN_AhabSyndication_Gambling_GameStart",
-					"Actor": "PCP_Knight",
-					"Dialog": "D_AhabSyndication_Gambling_PlayingGame",
-					"Text": "{0} is engaged in high-stakes gambling at the Boston Common Casino."
-				}
-			]
-		},
-		{
 			"GroupId": "B_AhabSyndication_Gambling_Results",
 			"Items": [
 				{
-					"StoryNode1": "DEL_SN_AhabSyndication_Gambling_GameStart",
+					"StoryNode1": "DEL_SN_AhabSyndication_Gambling_Legwork",
 					"Dialog": "D_AhabSyndication_Gambling_Results",
 					"EventId": "B_AhabSyndication_Gambling_ResultsGroup",
 					"EventType": "RandomOne"
@@ -498,11 +532,6 @@
 			"GroupId": "Post_AhabSyndication_Gambling_Stake100",
 			"Items": [
 				{
-					"Type": "TempStoryId",
-					"Actor": "PCP_Knight",
-					"StoryId": "PCT_AhabSyndication_Knight"
-				},
-				{
 					"Type": "Money",
 					"Money": -100
 				}
@@ -511,11 +540,6 @@
 		{
 			"GroupId": "Post_AhabSyndication_Gambling_Stake200",
 			"Items": [
-				{
-					"Type": "TempStoryId",
-					"Actor": "PCP_Knight",
-					"StoryId": "PCT_AhabSyndication_Knight"
-				},
 				{
 					"Type": "Money",
 					"Money": -200
@@ -526,11 +550,6 @@
 			"GroupId": "Post_AhabSyndication_Gambling_Stake400",
 			"Items": [
 				{
-					"Type": "TempStoryId",
-					"Actor": "PCP_Knight",
-					"StoryId": "PCT_AhabSyndication_Knight"
-				},
-				{
 					"Type": "Money",
 					"Money": -400
 				}
@@ -539,11 +558,6 @@
 		{
 			"GroupId": "Post_AhabSyndication_Gambling_Stake800",
 			"Items": [
-				{
-					"Type": "TempStoryId",
-					"Actor": "PCP_Knight",
-					"StoryId": "PCT_AhabSyndication_Knight"
-				},
 				{
 					"Type": "Money",
 					"Money": -800
@@ -674,39 +688,6 @@
 					"Type": "GameState",
 					"GameState1": "DEL_Temp_AhabSyndication_Gambling_Win",
 					"GameState2": "DEL_Temp_AhabSyndication_Gambling_WinState"
-				},
-				{
-				    "Type": "TempStoryId",
-					"Actor": "PCT_AhabSyndication_Knight",
-					"StoryId": "PCT_AhabSyndication_Knight",
-					"Remove": "true"
-				}
-			]
-		}
-	],
-	"StoryNode": [
-		{
-			"GroupId": "SN_AhabSyndication_Gambling",
-			"Items": [
-				{
-					"StoryNodeId": "SN_AhabSyndication_Gambling_Offer",
-					"Actor": "NTG_Mem_AhabSyndication_CasinoOwner",
-					"DebugText": "Buy into a high-stakes game",
-					"ExpirationTurns": -1
-				},
-				{
-					"StoryNodeId": "SN_AhabSyndication_Gambling_GameStart",
-					"Actor": "PCT_AhabSyndication_Knight",
-					"ExpirationBlock": "B_AhabSyndication_Gambling_Results",
-					"DebugText": "High-stakes game in progress",
-					"ExpirationTurns": 4
-				},
-				{
-					"StoryNodeId": "SN_AhabSyndication_Gambling_Cooldown",
-					"Actor": "NTG_Mem_AhabSyndication_CasinoOwner",
-					"ExpirationStoryNode": "SN_AhabSyndication_Gambling_Offer",
-					"DebugText": "High-stakes game on cooldown",
-					"ExpirationTurns": 120
 				}
 			]
 		}
@@ -757,7 +738,7 @@
 			]
 		},
 		{
-			"GroupId": "D_AhabSyndication_Gambling_GameStart",
+			"GroupId": "D_AhabSyndication_Gambling_Legwork",
 			"Items": [
 				{
 					"Actor": "NAR_",
