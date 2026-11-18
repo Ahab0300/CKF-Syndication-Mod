@@ -25,9 +25,9 @@ Source_JSON/ContactTypes.json
 # Contacts
 #
 # Each contact type file contains all the associated data for the following
-# tables as needed
+# tables as needed, including story elements to introduce them:
 #
-# ContactBackstory, ContactService, CosmeticGroup
+# ContactBackstory, Tag, CosmeticGroup, Block, BlockCondition, StoryNode, StoryMatch, Legwork
 
 Source_JSON/Contact_Dragons_CasinoOwner.json
 Source_JSON/Contact_Dragons_SynBlade.json
@@ -37,6 +37,15 @@ Source_JSON/Contact_Ricksham_SynBlade.json
 Source_JSON/Contact_Yakuza_SynBlade.json
 Source_JSON/Contact_Yakuza_SynBoss.json
 Source_JSON/Contact_Yakuza_SynFinance.json
+
+# Services
+#
+# Each contact class file contains all the associated data for the following
+# tables as needed, including story elements to operate the service:
+#
+# ContactService, Tag, Block, BlockCondition, StoryNode, StoryMatch, Legwork
+
+Source_JSON/Service_Gambling.json
 
 # Stories
 #
