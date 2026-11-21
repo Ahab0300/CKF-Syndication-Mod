@@ -34,9 +34,18 @@ In the future, the Knight will get additional benefits from playing the game.
 At the end of each game there will be a chance to meet new Contacts, get a
 clue to a potential job, and perhaps other events.
 
-## One-Time Sales
-The **Ricksham** Railmaster will offer the chance to buy rare products, a 
-one-time offer. This Contact and Service are not yet implemented.
+## Replica Weapon Mods
+The **Ricksham** Railmaster has a unique service selling weapon mods. At some
+point the Casting Director will add a story in which someone associated with
+weapons asks the Knight about a rumor. The contact asks the Knight to
+investigate a rumor that **Ricksham** is opening an exclusive sale. A legwork
+will lead to the **Ricksham** Railmaster, who decides to admit the Knight
+into the exclusive sale.
+
+The resulting Replica Weapon Mods service sells Epic and Legendary weapon mods
+which are normally only available from rare blueprints. Due to limited supply,
+purchasing something from the Replica Weapons Mods services triggers a 30-day
+cooldown before you can buy another weapon mod from the Railmaster.
 
 ### Future Development
 The service will be initiated by a normal proc-gen storyline, handled by the

@@ -16,10 +16,9 @@ control over contraband entering the city. **Syndication Mod** enables
 **Ricksham** to be a target for proc-gen missions, and **Ricksham** contacts
 can offer jobs.
 
-Future updates will add two new Contacts to the game, a Syndicate Blade and
-a Railmaster. The Railmaster is the equivalent of a Dockmaster for water
-traffic. The Railmaster will get a new Service offering the occasional sale
-of rare products.
+**Syndication Mod** adds two new Contacts for Ricksham: a Syndicate Blade
+and a Railmaster. The Railmaster is the equivalent of a Dockmaster for water
+traffic. The Railmaster has a new service selling Replica Weapon Mods.
 
 ## Seven Dragons
 The **Seven Dragons** syndicate is coded into the base game but is not

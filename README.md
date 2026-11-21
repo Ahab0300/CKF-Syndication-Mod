@@ -27,10 +27,11 @@ Syndication Mod adds the following to the base game:
 * The Yakuza (a syndicate faction in Cyber Knights Classic) is added to the game and available to the Casting Director
 * New Contacts added for Ricksham, Seven Dragons, and Yakuza (not yet available)
 * Gambling Service from Seven Dragons Casino Owner
+* Replica Weapon Mods Service from Ricksham Railmaster
 
 Future development may add some or all of the following:
 * Two or three unique enemy types for each of the five big Syndicates
-* Unique services for Syndicate contacts
+* Unique services for Yakuza and Que Milieu Syndicates
 
 CC-BY-NC\
 Creator: Ahab0300\

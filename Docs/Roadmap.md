@@ -5,7 +5,6 @@
 
 Roadmap for future development of the **Syndication Mod**:
 
-- Implement One-Time Sales for Railmaster
 - Implement Moneylending for Mongrel
 - Implement Strong-Arm Enforcement service for Yakuza SynBlade
 - Create methods for the new Contacts to join the game (the Contacts themselves

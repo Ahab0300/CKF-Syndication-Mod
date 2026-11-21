@@ -46,10 +46,4 @@ Source_JSON/Contact_Yakuza_SynFinance.json
 # ContactService, Tag, Block, BlockCondition, StoryNode, StoryMatch, Legwork
 
 Source_JSON/Service_Gambling.json
-
-# Stories
-#
-# Each contact type file contains all the associated data for the following
-# tables as needed:
-#
-# Legwork, StoryNode, StoryMatch, Block, BlockCondition, Dialog, DialogQuip, Tag, Talent
+Source_JSON/Service_Replicas.json

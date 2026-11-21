@@ -1,7 +1,7 @@
 {
 	"Metadata": {
 		"#": "Seven Dragons Casino Owner",
-		"StoryKey": "AhabSyndication_Dragons_CasinoOwner",
+		"StoryKey": "AhabSyndication_CasinoOwner",
 		"StartingId": 781041401
 	},
 	"ContactBackstory": [
@@ -19,11 +19,11 @@
 			"Trait1B": "ConTrait_Greedy",
 			"Trait2A": "ConTrait_TightLipped",
 			"Trait2B": "ConTrait_EasyToPlease",
-			"ContactLink": "NCP_AhabSyndication_Dragons_CasinoOwner",
+			"ContactLink": "NCP_AhabSyndication_CasinoOwner",
 			"FactionTag": "Faction_SevenDragons",
 			"Tag1": "Faction_Corrupt+Faction_SevenDragons",
 			"Tag2": "Tag_PowerCenter",
-			"TagID": "PersonID_NCP_AhabSyndication_Dragons_CasinoOwner",
+			"TagID": "PersonID_NCP_AhabSyndication_CasinoOwner",
 			"Location": "Boston Common Casino",
 			"GivenName": "Echo"
 		}
@@ -31,27 +31,11 @@
 	"Tag": [
 		{
 			"TagClass": "PersonalID",
-			"TagId": "PersonID_NCP_AhabSyndication_Dragons_CasinoOwner"
+			"TagId": "PersonID_NCP_AhabSyndication_CasinoOwner"
 		},
 		{
 			"TagClass": "Hidden",
-			"TagId": "Srv_Gambling_PL1"
-		},
-		{
-			"TagClass": "Hidden",
-			"TagId": "Srv_Gambling_PL2"
-		},
-		{
-			"TagClass": "Hidden",
-			"TagId": "Srv_Gambling_PL3"
-		},
-		{
-			"TagClass": "Hidden",
-			"TagId": "Srv_Gambling_PL4"
-		},
-		{
-			"TagClass": "Hidden",
-			"TagId": "Mem_AhabSyndication_CasinoIntro"
+			"TagId": "Mem_AhabSyndication_CasinoOwner_Intro"
 		},
 		{
 			"TagClass": "Hidden",
@@ -60,51 +44,50 @@
 	],
 	"Block": [
 		{
-			"GroupId": "B_AhabSyndication_Casino_Match",
+			"GroupId": "B_AhabSyndication_CasinoOwner_Match",
 			"Items": [
 				{
-					"Weight": 20,
-					"PreState1": "NOT_TEMP_AhabSyndication_Casino_Intro",
-					"PreDialogPostCondition": "Post_AhabSyndication_Casino_Intro",
-					"PostState1": "ADD_TEMP_AhabSyndication_Casino_Intro",
-					"PostState2": "ADD_S_AhabSyndication_MetCasinoOwner",
-					"StoryNode1": "ADD_SN_AhabSyndication_Casino_Intro",
+					"Weight": 10,
+					"PreState1": "NOT_TEMP_AhabSyndication_CasinoOwner_Intro",
+					"PreDialogPostCondition": "Post_AhabSyndication_CasinoOwner_Intro",
+					"PostState1": "ADD_TEMP_AhabSyndication_CasinoOwner_Intro",
+					"StoryNode1": "ADD_SN_AhabSyndication_CasinoOwner_Intro",
 					"OnlyRunOnce": "Forever",
-					"EventId": "Match_AhabSyndication_Casino_Intro",
+					"EventId": "Match_AhabSyndication_CasinoOwner_Intro",
 					"EventType": "Vignette"
 				}
 			]
 		},
 		{
-			"GroupId": "B_AhabSyndication_Casino_Intro",
+			"GroupId": "B_AhabSyndication_CasinoOwner_Intro",
 			"Items": [
 				{
-					"StoryNodeId": "SN_AhabSyndication_Casino_Intro",
-					"Actor": "NCT_AhabSyndication_CasinoIntro",
+					"StoryNodeId": "SN_AhabSyndication_CasinoOwner_Intro",
+					"Actor": "NCT_AhabSyndication_CasinoOwner_Intro",
 					"Target": "NCT_AhabSyndication_CasinoOwner",
 					"Side": "R",
-					"Dialog": "D_AhabSyndication_Casino_Intro",
-					"EventId": "B_AhabSyndication_Casino_IntroCleanup",
+					"Dialog": "D_AhabSyndication_CasinoOwner_Intro",
+					"EventId": "B_AhabSyndication_CasinoOwner_IntroCleanup",
 					"EventType": "TalkOn",
 					"Text": "I received a curious message from the owner of the Boston Common Casino."
 				}
 			]
 		},
 		{
-			"GroupId": "B_AhabSyndication_Casino_IntroCleanup",
+			"GroupId": "B_AhabSyndication_CasinoOwner_IntroCleanup",
 			"Items": [
 				{
-					"PostConditionGroup": "Post_AhabSyndication_Casino_IntroCleanup",
-					"PostState1": "DEL_TEMP_AhabSyndication_Casino_Intro",
+					"PostConditionGroup": "Post_AhabSyndication_CasinoOwner_IntroCleanup",
+					"PostState1": "DEL_TEMP_AhabSyndication_CasinoOwner_Intro",
 					"StoryNode1": "ADD_SN_AhabSyndication_Gambling_Offer",
-					"StoryNode2": "DEL_SN_AhabSyndication_Casino_Intro"
+					"StoryNode2": "DEL_SN_AhabSyndication_CasinoOwner_Intro"
 				}
 			]
 		}
 	],
 	"BlockCondition": [
 		{
-			"GroupId": "Post_AhabSyndication_Casino_Intro",
+			"GroupId": "Post_AhabSyndication_CasinoOwner_Intro",
 			"Items": [
 				{
 					"Type": "AddCharacter",
@@ -115,12 +98,12 @@
 			]
 		},
 		{
-			"GroupId": "Post_AhabSyndication_Casino_IntroCleanup",
+			"GroupId": "Post_AhabSyndication_CasinoOwner_IntroCleanup",
 			"Items": [
 				{
 					"Type": "TempStoryId",
-					"Actor": "NCT_AhabSyndication_CasinoIntro",
-					"StoryId": "NCT_AhabSyndication_CasinoIntro",
+					"Actor": "NCT_AhabSyndication_CasinoOwner_Intro",
+					"StoryId": "NCT_AhabSyndication_CasinoOwner_Intro",
 					"Remove": "true"
 				},
 				{
@@ -134,13 +117,13 @@
 	],
 	"StoryNode": [
 		{
-			"GroupId": "SN_AhabSyndication_CasinoOnwer",
+			"GroupId": "SN_AhabSyndication_CasinoOwner",
 			"Items": [
 				{
-					"StoryNodeId": "SN_AhabSyndication_Casino_Intro",
-					"Actor": "NCT_AhabSyndication_CasinoIntro",
+					"StoryNodeId": "SN_AhabSyndication_CasinoOwner_Intro",
+					"Actor": "NCT_AhabSyndication_CasinoOwner_Intro",
 					"Target": "NCT_AhabSyndication_CasinoOwner",
-					"OnAddedBlock": "B_AhabSyndication_Casino_Intro",
+					"OnAddedBlock": "B_AhabSyndication_CasinoOwner_Intro",
 					"DebugText": "Offer to join high-stakes games",
 					"ExpirationTurns": 1
 				}
@@ -149,20 +132,20 @@
 	],
 	"StoryMatch": [
 		{
-			"GroupId": "Match_AhabSyndication_Casino_Intro",
+			"GroupId": "Match_AhabSyndication_CasinoOwner_Intro",
 			"Items": [
 				{
 					"Status": 1,
 					"TagReq1": "NPC_Meta_Entertainment",
-					"TagMatch": "Mem_AhabSyndication_CasinoIntro",
-					"Actor": "NCT_AhabSyndication_CasinoIntro",
+					"TagMatch": "Mem_AhabSyndication_CasinoOwner_Intro",
+					"Actor": "NCT_AhabSyndication_CasinoOwner_Intro",
 					"DebugName": "Casino Owner intro"
 				},
 				{
 					"Optional": "CreateOrFind",
 					"Backstory": 781041401,
 					"Status": 1,
-					"TagReq1": "PersonID_NCP_AhabSyndication_Dragons_CasinoOwner",
+					"TagReq1": "PersonID_NCP_AhabSyndication_CasinoOwner",
 					"TagMatch": "Mem_AhabSyndication_CasinoOwner",
 					"Actor": "NCT_AhabSyndication_CasinoOwner",
 					"DebugName": "Dragons Casino Owner"
@@ -172,10 +155,10 @@
 	],
 	"Dialog": [
 		{
-			"GroupId": "D_AhabSyndication_Casino_Intro",
+			"GroupId": "D_AhabSyndication_CasinoOwner_Intro",
 			"Items": [
 				{
-					"Actor": "NCT_AhabSyndication_CasinoIntro",
+					"Actor": "NCT_AhabSyndication_CasinoOwner_Intro",
 					"Target": "NCT_AhabSyndication_CasinoOwner",
 					"Side": "R",
 					"Text": "The casino is owned by {1} but rumors say it is a front for the <style=DialogName>Seven Dragons</style> syndicate."
@@ -185,17 +168,17 @@
 					"Text": "<style=DialogName>Seven Dragons</style> specializes in financial crimes, don't they?"
 				},
 				{
-					"Actor": "NCT_AhabSyndication_CasinoIntro",
+					"Actor": "NCT_AhabSyndication_CasinoOwner_Intro",
 					"Side": "R",
 					"Text": "Everything from extortion to counterfeiting to white-collar fraud."
 				},
 				{
-					"Actor": "NCT_AhabSyndication_CasinoIntro",
+					"Actor": "NCT_AhabSyndication_CasinoOwner_Intro",
 					"Side": "R",
 					"Text": "But their real strength is investment in legitimate businesses."
 				},
 				{
-					"Actor": "NCT_AhabSyndication_CasinoIntro",
+					"Actor": "NCT_AhabSyndication_CasinoOwner_Intro",
 					"Side": "R",
 					"Text": "They generally keep a low profile and launder their illegal proceeds through some of their businesses."
 				},
@@ -204,7 +187,7 @@
 					"Text": "A casino would be a particularly good place to launder money, as well as a source for identifying and scoping out potential targets."
 				},
 				{
-					"Actor": "NCT_AhabSyndication_CasinoIntro",
+					"Actor": "NCT_AhabSyndication_CasinoOwner_Intro",
 					"Target": "NCT_AhabSyndication_CasinoOwner",
 					"Side": "R",
 					"Text": "Now the owner, {1}, wants to talk to you."

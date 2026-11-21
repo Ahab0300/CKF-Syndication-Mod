@@ -61,7 +61,6 @@
 			"FailType": "FailRepeat",
 			"ContactOwner": "NCT_AhabSyndication_LegRailmaster",
 			"BlockSuccess": "B_AhabSyndication_LegRailmaster_Win",
-			"BlockFail": "B_AhabSyndication_LegRailmaster_Loss",
 			"Title": "Long Train Runnin'",
 			"Desc": "{1} is looking for information about a rumored Ricksham exclusive sale.",
 			"Win": "You have found the Ricksham Railmaster running the sale.",
@@ -287,16 +286,6 @@
 			]
 		},
 		{
-			"GroupId": "B_AhabSyndication_LegRailmaster_Loss",
-			"Items": [
-				{
-					"PostConditionGroup": "Post_AhabSyndication_LegRailmaster_Loss",
-					"StoryNode1": "ADD_SN_AhabSyndication_LegRailmaster_Cleanup",
-					"Dialog": "D_AhabSyndication_LegRailmaster_Loss"
-				}
-			]
-		},
-		{
 			"GroupId": "B_AhabSyndication_LegRailmaster_Cleanup",
 			"Items": [
 				{
@@ -330,6 +319,11 @@
 			"GroupId": "Post_AhabSyndication_LegRailmaster_Meeting",
 			"Items": [
 				{
+					"Type": "ContactService",
+					"Actor": "NCP_AhabSyndication_Ricksham_Railmaster",
+					"ServiceId": 781042002
+				},
+				{
 					"Type": "AddCharacter",
 					"Actor": "NCP_AhabSyndication_Ricksham_SynBlade",
 					"BackstoryId": -1,
@@ -344,17 +338,6 @@
 					"Type": "TempStoryId",
 					"Actor": "NCT_AhabSyndication_LegRailmaster",
 					"Remove": "true"
-				}
-			]
-		},
-		{
-			"GroupId": "Post_AhabSyndication_LegRailmaster_Loss",
-			"Items": [
-				{
-					"ConditionType": "ContactMeta",
-					"Actor": "NCT_AhabSyndication_LegRailmaster",
-					"ConditionValue": 1,
-					"OptionId": 1
 				}
 			]
 		}
@@ -376,13 +359,13 @@
 				{
 					"Actor": "NCT_AhabSyndication_LegRailmaster",
 					"Side": "R",
-					"Text": "Some rare product they have come across. And the sale will have a limited audience."
+					"Text": "Some rare products they have come across. And the sale will have a limited audience."
 				},
 				{
 					"Actor": "NCT_AhabSyndication_LegRailmaster",
 					"Side": "R",
 					"PreState1": "EQL_1_Temp_AhabSyndication_LegRailmaster_Type",
-					"Text": "If it is a weapon, I want to see it."
+					"Text": "If they have weapons, I want to see them."
 				},
 				{
 					"Actor": "NCT_AhabSyndication_LegRailmaster",
@@ -410,7 +393,7 @@
 				{
 					"Actor": "NCT_AhabSyndication_LegRailmaster",
 					"Side": "R",
-					"Text": "Track down the rumors. Find out who is running this event so I can try to get in."
+					"Text": "Track down the rumors. Find out who is running this sale so I can try to get in."
 				},
 				{
 					"Actor": "NCT_AhabSyndication_LegRailmaster",
@@ -451,7 +434,7 @@
 				{
 					"Actor": "NCT_AhabSyndication_LegRailmaster",
 					"Side": "R",
-					"Text": "Who knows? Armor? Weapons? Weapon mods? No one seems to know. Maybe it's just 20th Century silverware?"
+					"Text": "I think it's either weapons or weapon mods."
 				},
 				{
 					"Actor": "NCT_AhabSyndication_LegRailmaster",
@@ -477,7 +460,7 @@
 				{
 					"Actor": "NCT_AhabSyndication_LegRailmaster",
 					"Side": "R",
-					"Text": "My guess is they came across a small lot of something really special."
+					"Text": "My guess is they have some new source and they are feeling out the market."
 				}
 			]
 		},
@@ -613,31 +596,26 @@
 				{
 					"Actor": "NCP_AhabSyndication_Ricksham_Railmaster",
 					"Side": "R",
-					"Text": "Yes, we are holding a special sale soon."
+					"Text": "Yes, we are starting a special sale soon."
 				},
 				{
 					"Actor": "NCP_AhabSyndication_Ricksham_Railmaster",
 					"Side": "R",
-					"Text": "We hold these private sales whenever we come across a particularly interesting small shipment."
+					"Text": "We have connected with a supplier out in Phoenix making reproductions of rare weapon mods."
 				},
 				{
 					"Actor": "PCP_Face",
-					"Text": "What kind of products?"
+					"Text": "Knock-off weapon mods?"
 				},
 				{
 					"Actor": "NCP_AhabSyndication_Ricksham_Railmaster",
 					"Side": "R",
-					"Text": "Sometimes very rare treasures or luxury goods. But I think you are interested in the military goods?"
+					"Text": "These are quality goods, they just don't have the manufacturer's stamp on them."
 				},
 				{
 					"Actor": "NCP_AhabSyndication_Ricksham_Railmaster",
 					"Side": "R",
-					"Text": "We sometimes find special deliveries of armor, weapons, weapon mods."
-				},
-				{
-					"Actor": "NCP_AhabSyndication_Ricksham_Railmaster",
-					"Side": "R",
-					"Text": "Rare stuff you can hardly ever find."
+					"Text": "They clearly have a good blueprint forger and access to a decent NanoFab."
 				},
 				{
 					"Actor": "PCP_Knight",
@@ -651,47 +629,30 @@
 				{
 					"Actor": "NCP_AhabSyndication_Ricksham_Railmaster",
 					"Side": "R",
-					"Text": "We have something up for sale right now. And I'll let you know if we get anything else you might be interested in."
+					"Text": "Since we have a limited supply, you will be restricted to one purchase a month."
 				},
-				{
+				{ 
 					"Actor": "NCP_AhabSyndication_Ricksham_Railmaster",
 					"Target": "NCP_AhabSyndication_Ricksham_SynBlade",
 					"Side": "R",
-					"Text": "Oh, and you should meet {1}; {3} runs security for the events."
+					"Text": "Oh, and you should meet {1}; {3} runs security for the shipments."
 				},
 				{
 					"Actor": "PCP_Knight",
 					"Text": "Thank you. I'm looking forward to seeing what you have."
-				}
-			]
-		},
-		{
-			"GroupId": "D_AhabSyndication_LegRailmaster_Loss",
-			"Items": [
-				{
-					"Actor": "PCP_Face",
-					"Side": "R",
-					"Target": "PTG_LegMem_AhabSyndication_LegRailmaster",
-					"Text": "{1} is back but the news isn't good."
-				},
-				{
-					"Actor": "PCP_Knight",
-					"Text": "Did you find out anything about this Ricksham sale?"
-				},
-				{
-					"Actor": "PTG_LegMem_AhabSyndication_LegRailmaster",
-					"Side": "R",
-					"Text": "No. I shook every tree I could and all I got was nothing. No one is talking on the street."
-				},
-				{
-					"Actor": "NCT_AhabSyndication_LegRailmaster",
-					"Side": "R",
-					"Text": "I was afraid of that. Ricksham must have clamped down hard on the rumors."
 				},
 				{
 					"Actor": "NAR_",
-					"Target": "PTG_LegMem_AhabSyndication_LegRailmaster",
-					"Text": "We have gained <style=DialogTerm>+20% Heat</style> for failing this <style=DialogTerm>Legwork</style>."
+					"Text": "We can find {1} in our Contact list to check out what additional services and offerings {3} may be able to provide."
+				},
+				{
+					"Actor": "NAR_",
+					"Target": "NCP_AhabSyndication_Ricksham_Railmaster",
+					"Text": "To find the special weapon mods, filter the Market to gear sold by {1}."
+				},
+				{
+					"Actor": "NAR_",
+					"Text": "After purchasing from the Reproduction Weapon Mods services, there will be a cooldown of 30 days before you can use the services again."
 				}
 			]
 		}
