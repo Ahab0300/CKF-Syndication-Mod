@@ -1,0 +1,57 @@
+{
+    "Metadata": {
+        "#": "Strongarm Service",
+        "StoryKey": "AhabSyndication_Strongarm",
+        "StartingId": 781042001
+    },
+    "ContactService": [
+        {
+            "ServiceTypeId": 781042201,
+            "Class": 1,
+            "Group": 781042201,
+            "Level": 1,
+            "Display": 1,
+            "Option": 781042201,
+            "Upgrade": 1,
+            "TagMatch": "Srv_AhabSyndication_Strongarm_PL1",
+            "Name": "Strongarm",
+            "Desc": "Offers to send enforcers to strongarm an enemy's interests"
+        },
+        {
+            "ServiceTypeId": 781042202,
+            "Class": 1,
+            "Group": 781042201,
+            "Level": 2,
+            "Display": 2,
+            "Option": 7810422012,
+            "Upgrade": 1,
+            "TagMatch": "Srv_AhabSyndication_Strongarm_PL2",
+            "Name": "Strongarm",
+            "Desc": "Offers to send enforcers to strongarm an enemy's interests"
+        },
+        {
+            "ServiceTypeId": 781042203,
+            "Class": 1,
+            "Group": 781042201,
+            "Level": 3,
+            "Display": 3,
+            "Option": 781042203,
+            "Upgrade": 1,
+            "TagMatch": "Srv_AhabSyndication_Strongarm_PL3",
+            "Name": "Strongarm",
+            "Desc": "Offers to send enforcers to strongarm an enemy's interests"
+        },
+        {
+            "ServiceTypeId": 781042204,
+            "Class": 1,
+            "Group": 781042201,
+            "Level": 4,
+            "Display": 4,
+            "Option": 781042204,
+            "Upgrade": 2,
+            "TagMatch": "Srv_AhabSyndication_Strongarm_PL4",
+            "Name": "Strongarm",
+            "Desc": "Offers to send enforcers to strongarm an enemy's interests"
+        }
+    ]
+}

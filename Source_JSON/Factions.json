@@ -21,7 +21,7 @@
             "FactionId": 781040001,
             "Class": 4,
             "ProcGen": 1,
-            "Tag": "Faction_Yakuza",
+            "Tag": "Faction_AhabSyndication_Yakuza",
             "Name": "Yakuza",
             "ShortName": "Yakuza",
             "ShortName2": "Yak"
@@ -32,7 +32,7 @@
             "JsonId": 781040001,
             "TagClass": "FactionOrigin",
             "Hidden": "Yes",
-            "TagId": "Faction_Yakuza",
+            "TagId": "Faction_AhabSyndication_Yakuza",
             "ExtraTag": "Faction_Syndicates",
             "Legwork": "Yakuza",
             "Name": "Yakuza",

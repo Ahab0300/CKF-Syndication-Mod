@@ -7,3 +7,15 @@ prominent role in drug imports and couple other small dead or dying syndicates a
 - [Factions](Factions.md)
 - [Services](Services.md)
 - [Roadmap](Roadmap.md)
+
+---
+I would like to thank the following people who have provided comments and ideas for
+this mod. I have not used all the ideas they presented, but all of the commentary helped
+me develop the mod concepts.
+
+Bumc
+Jon_dArc
+juslovmusic
+Lenora
+Soppyamoeba8402
+UNA Blue Card Inspector

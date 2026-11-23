@@ -32,5 +32,79 @@
 			"TagClass": "PersonalID",
 			"TagId": "PersonID_NCP_AhabSyndication_Yakuza_SynBoss"
 		}
+	],
+	"Block": [
+		{
+			"GroupId": "B_UHUB_Contact_Fixer",
+			"Items": [
+				{
+					"Weight": 20,
+					"PreState1": "NOT_UHUB_Fixer_AhabSyndication_Yakuza_SynBoss",
+					"PostConditionGroup": "Post_UHUB_Fixer_AhabSyndication_Yakuza_SynBoss",
+					"PostState1": "ADD_UHUB_Fixer_AhabSyndication_Yakuza_SynBoss",
+					"EventId": "B_UHUB_Contact_Fixer_AhabSyndication_Yakuza_SynBoss_Dialog",
+					"EventType": "Group"
+				}
+			]
+		},
+		{
+			"GroupId": "B_UHUB_Contact_Fixer_AhabSyndication_Yakuza_SynBoss_Dialog",
+			"Items": [
+				{
+					"Weight": 10,
+					"Dialog": "D_UHUB_AhabSyndication_Yakuza_SynBoss"
+				}
+			]
+		}
+	],
+	"BlockCondition": [
+		{
+			"GroupId": "Post_UHUB_Fixer_AhabSyndication_Yakuza_SynBoss",
+			"Items": [
+				{
+					"Type": "AddCharacter",
+					"Actor": "NCP_AhabSyndication_Yakuza_SynBoss",
+					"BackstoryId": -1,
+					"BackstoryHint": 781041501
+				}
+			]
+		}
+	],
+	"Dialog": [
+		{
+			"GroupId": "D_UHUB_AhabSyndication_Yakuza_SynBoss",
+			"Items": [
+				{
+					"Actor": "PCP_Face",
+					"Side": "L",
+					"Target": "NCP_AhabSyndication_Yakuza_SynBoss",
+					"Text": "Let me introduce {1}, our latest connect and {2}."
+				},
+				{
+					"Actor": "NCP_AhabSyndication_Yakuza_SynBoss",
+					"Side": "R",
+					"Text": "Are you lookng for the Yakuza to do something for you? You come to me."
+				},
+				{
+					"Actor": "NCP_AhabSyndication_Yakuza_SynBoss",
+					"Side": "R",
+					"Text": "If the fish has feeling for the water, the water has feeling for the fish."
+				},
+				{
+					"Actor": "NCP_AhabSyndication_Yakuza_SynBoss",
+					"Text": "You scratch my back, I'll scratch yours."
+				},
+				{
+					"Actor": "NCP_AhabSyndication_Yakuza_SynBoss",
+					"Side": "R",
+					"Text": "Exactly."
+				},
+				{
+					"Actor": "NAR_",
+					"Target": "NCP_AhabSyndication_Yakuza_SynBoss",
+					"Text": "We can find {8} in our Contact list to check out what additional services and offerings they may be able to offer."
+				}
+			]
+		}
 	]
 }
