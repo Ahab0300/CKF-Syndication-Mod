@@ -11,7 +11,7 @@
 #
 # Faction, Tag
 
-Source_JSON/Factions.json
+Factions.json
 
 # Contact Classes
 #
@@ -20,7 +20,7 @@ Source_JSON/Factions.json
 #
 # ContactType, ContactService, Tag
 
-Source_JSON/ContactTypes.json
+ContactTypes.json
 
 # Contacts
 #
@@ -29,14 +29,14 @@ Source_JSON/ContactTypes.json
 #
 # ContactBackstory, Tag, CosmeticGroup, Block, BlockCondition, StoryNode, StoryMatch, Legwork
 
-Source_JSON/Contact_Dragons_CasinoOwner.json
-Source_JSON/Contact_Dragons_SynBlade.json
-Source_JSON/Contact_Dragons_SynFinance.json
-Source_JSON/Contact_Ricksham_Railmaster.json
-Source_JSON/Contact_Ricksham_SynBlade.json
-Source_JSON/Contact_Yakuza_SynBlade.json
-Source_JSON/Contact_Yakuza_SynBoss.json
-Source_JSON/Contact_Yakuza_SynFinance.json
+Contact_Dragons_CasinoOwner.json
+Contact_Dragons_SynBlade.json
+Contact_Dragons_SynFinance.json
+Contact_Ricksham_Railmaster.json
+Contact_Ricksham_SynBlade.json
+Contact_Yakuza_SynBlade.json
+Contact_Yakuza_SynBoss.json
+Contact_Yakuza_SynFinance.json
 
 # Services
 #
@@ -45,5 +45,5 @@ Source_JSON/Contact_Yakuza_SynFinance.json
 #
 # ContactService, Tag, Block, BlockCondition, StoryNode, StoryMatch, Legwork
 
-Source_JSON/Service_Gambling.json
-Source_JSON/Service_Replicas.json
+Service_Gambling.json
+Service_Replicas.json

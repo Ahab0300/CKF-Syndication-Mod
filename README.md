@@ -18,7 +18,7 @@ prominent role in drug imports and couple other small dead or dying syndicates a
 To load the **Syndication Mod**, subscribe to it in the
 [Steam Workshop](https://store.steampowered.com/app/1021210/Cyber_Knights_Flashpoint/).
 
-[Full Syndication Mod Documentation](Docs/Main.md)
+[Full Syndication Mod Documentation](Docs/index.md)
 
 Syndication Mod adds the following to the base game:
 
